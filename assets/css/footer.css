@@ -1,0 +1,147 @@
+@import "./index.css";
+
+
+#maincontent {
+
+}
+
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  color: var(--color-precio)
+}
+
+#footer__datos {
+  background-color: var(--color-footer);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 80%;
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+#footer__datos-info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#footer__datos-info a {
+  text-decoration: none;
+  color: var(--color-precio);
+}
+#footer__datos-info a:hover {
+  text-shadow: 0px 1px 4px var(--color-boton);
+  font-weight: bold;
+}
+
+
+#footer__datos-info img {
+  width: 10rem;
+  height: 3rem;
+}
+#footer__datos-info ul {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  font-size: 14px;
+}
+
+#footer__datos-contacto {
+  width: 30rem;
+  row-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer__datos-contacto span:nth-child(1) {
+  color: var(--color-precio);
+  font-weight: bold;
+}
+
+#form_contacto {
+  display: flex;
+  flex-direction: column;
+}
+
+#form_contacto .campos {
+  display: flex;
+  flex-direction: column;
+}
+
+#form_contacto-fs1 input {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#form_contacto-fs1 span {
+  position: relative;
+  bottom: 2.8em;
+  font-size: 12px;
+  left: 1.5em;
+}
+
+
+
+#form_contacto-fs2 input {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 5px;
+}
+
+#form_contacto-fs2 span {
+  position: relative;
+  bottom: 4em;
+  font-size: 12px;
+  left: 1.5em;
+}
+
+
+#form_contacto fieldset input:nth-child(2) {
+  height: 4rem;
+}
+
+#form_contacto button {
+  color: white;
+  text-decoration: none;
+  background-color: var(--color-boton);
+  width: 8rem;
+  height: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+}
+
+
+#footer__creditos {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+}
+
+#footer__creditos #me {
+  font-weight: bold;
+}
+#footer__creditos a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-precio);
+}
+#footer__creditos a:hover {
+  text-shadow: 0px 1px 1px orangered;
+}

@@ -1,0 +1,54 @@
+@import "./index.css";
+
+#all {
+  background-color: var(--color-fondo);
+
+  padding: 3rem 7rem 3rem 7rem;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  justify-content: center;
+}
+#all__head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#all__head span {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--color-precio);
+}
+#all__head a {
+  color: white;
+  text-decoration: none;
+  background-color: var(--color-boton);
+  width: 10rem;
+  height: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+
+#all__body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 5rem;
+}
+
+.producto {
+}
+
+.producto img {
+  width: 100%;
+}

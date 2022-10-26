@@ -1,0 +1,82 @@
+@import "./index.css";
+
+
+#maincontent {
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+#newproduct {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+#newproduct__title {
+  width: 50%;
+}
+#newproduct__title h1 {
+  color: var(--color-precio);
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+#newproduct__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin-top: 1rem;
+  width: 50%;
+  padding-left: 2rem;
+}
+
+#newproduct__form .fieldsetForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.fieldsetForm span {
+  color: gray;
+  padding-left: 1rem;
+}
+.fieldsetForm input {
+  border: none;
+  height: 2rem;
+  text-transform: capitalize;
+  padding-left: 1rem;
+  font-size: 20px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-bottom: 1px solid gray;
+}
+.fieldsetForm input:focus-visible {
+  outline: none;
+  /* outline-style: dashed;
+  outline-color: var(--color-boton);
+  outline-width: 3px; */
+}
+
+
+#newproduct__form button {
+  color: white;
+  text-decoration: none;
+  background-color: var(--color-boton);
+  height: 3rem;
+  border-radius: 4px;
+  border: none;
+  width: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 0px 1px 5px navy;
+}

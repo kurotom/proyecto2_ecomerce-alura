@@ -1,0 +1,170 @@
+@import "./index.css";
+
+
+@media screen and (max-width: 500px) {
+
+  #navbar {
+    padding: 1rem;
+
+  }
+
+  #navbar a {
+    width: 7rem;
+  }
+
+
+  #navbar ul {
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: center !important;
+  }
+
+  #navbar ul li:first-child {
+    margin-bottom: -10px;
+  }
+
+  #navbar__form {
+    width: auto;
+  }
+
+  #navbar__form img {
+    z-index: 1;
+    position: relative;
+    float: right;
+    right: 1rem !important;
+    top: 0rem;
+  }
+
+  #banner__divs {
+    left: 1rem;
+    width: calc(100% - 1rem);
+  }
+
+  #banner__divs h1 {
+    font-size: 30px
+  }
+  #banner__divs span {
+    font-size: 15px;
+  }
+
+
+
+  .fila__productos {
+    flex-wrap: wrap;
+  }
+
+  .producto {
+    display: none;
+  }
+  .producto:nth-child(-n + 4) {
+    display: flex;
+    width: 47%;
+  }
+  .producto:nth-child(-n + 4) img {
+    width: 100%;
+  }
+
+  #footer {
+    /* flex-direction: column; */
+    height: auto;
+  }
+  #footer__datos {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    flex-direction: column;
+    width: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  #footer__datos-info {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  #footer__datos-info ul {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  #footer__datos-contacto {
+    width: auto;
+  }
+  #footer__creditos {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+
+  #all {
+    padding: 3rem 2rem 3rem 2rem;
+  }
+  #all .producto {
+    display: flex;
+    width: 47%;
+  }
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+  #banner__divs {
+    width: 90%;
+  }
+
+  #navbar ul {
+    column-gap: 2rem;
+  }
+
+  .fila__productos {
+    /* flex-wrap: wrap; */
+  }
+
+  .producto {
+    display: none;
+  }
+  .producto:nth-child(-n + 4) {
+    display: flex;
+    width: 47%;
+  }
+  .producto:nth-child(-n + 4) img {
+    width: 100%;
+  }
+
+  #footer__datos {
+    padding: 2rem;
+  }
+
+  #footer__datos-info {
+    display: grid;
+    grid-template-areas:
+      "logo form"
+      "info vacio";
+  }
+
+  #footer__datos-info img {
+    grid-area: logo;
+  }
+  #footer__datos-info ul {
+    grid-area: logo;
+    margin-top: 4rem;
+  }
+  #footer__datos-contacto {
+    grid-area: form
+  }
+
+  #footer__creditos {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  #all {
+    padding: 3rem 2rem 3rem 2rem;
+  }
+  #all__body {
+    justify-content: flex-start;
+  }
+  #all .producto {
+    display: flex;
+    width: 23.3%;
+  }
+}
