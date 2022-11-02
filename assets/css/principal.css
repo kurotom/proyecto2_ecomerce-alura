@@ -78,7 +78,12 @@
 }
 
 #banner {
-  background-image: url('/assets/img/banner.png');
+	/* BANNER PARA GITHUB PAGES */
+	background-image:	url('https://kurotom.github.io/alura/ecommerce/assets/img/banner.png');
+
+	/* PARA LOCAL*/
+  /* background-image: url('/assets/img/banner.png'); */
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
