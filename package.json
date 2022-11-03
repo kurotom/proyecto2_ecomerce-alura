@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "dependencies": {
     "concurrently": "^7.5.0",
     "json-server": "^0.17.0",
@@ -9,10 +10,9 @@
   "description": "proyecto ecommerce CRUD",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-		"start": "concurrently \"json-server -p 8000 --watch db.json\" \"live-server --open=index.html\""
+    "start": "concurrently \"json-server -p 8000 --watch db.json\" \"live-server --open=index.html\""
   },
   "repository": {
     "type": "git",

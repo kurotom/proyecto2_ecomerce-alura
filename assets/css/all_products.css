@@ -7,7 +7,7 @@
 
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 1rem;
   justify-content: center;
 }
 #all__head {
@@ -47,8 +47,41 @@
 }
 
 .producto {
+  row-gap: 0;
+}
+
+.producto__options {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  top: 1.8rem;
+  margin: 0 auto;
+  align-items: center;
+}
+.icons {
+  font-size: 1.5em;
+  color: white !important;
+  font-weight: bold !important;
+  text-shadow: 0px 2px 5px black;
+}
+.icons:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.producto__informacion {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.7rem;
 }
 
 .producto img {
   width: 100%;
+}
+
+.producto a {
+  text-decoration: none;
+  color: var(--color-verproducto);
 }

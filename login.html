@@ -28,7 +28,7 @@
 
 
     <!-- Scripts -->
-    <script type="text/javascript" src="./assets/js/index.js"></script>
+    <script type="module" src="./assets/js/login.js"></script>
 
 
     <title>Proyecto Ecommerce</title>
@@ -60,17 +60,38 @@
 
     <main id="maincontent">
 
-      <div id="login" class="">
+      <div id="message" class="" >
+        <div id="message__contenido" class="" data-msg>
+          <div id="message__span" data-msg-span></div>
+          <div id="message__close" data-msg-close>x</div>
+        </div>
+      </div>
+
+      <div id="login" class="" data-login>
         <span>Iniciar Sesión</span>
-        <form id="login__form" class="" action="index.html" method="post">
+        <form id="login__form" class="" data-form>
           <fieldset>
-            <input type="email" name="email" value="" placeholder="Escriba su correo electrónico">
+            <input type="email" name="email" value="" placeholder="Escriba su correo electrónico" data-form-email>
           </fieldset>
           <fieldset>
-            <input type="password" name="password" value="" placeholder="Escriba su contraseña">
+            <input type="password" name="password" value="" minlength="4" placeholder="Escriba su contraseña" data-form-password>
           </fieldset>
-          <button type="button" name="button">Entrar</button>
+          <button type="submit" name="button">Entrar</button>
         </form>
+      </div>
+
+      <div id="panel" class="" data-panel>
+        <div id="panel__control" class="">
+          <h1 id="panel__name" data-panel-name></h1>
+          <span id="panel__quitBtn" data-panel-quit>Salir</span>
+        </div>
+        <div id="panel__datos" class="">
+          <div class="panel__datos-div">
+            <span>Email</span>
+            <span id="panel__email" data-panel-email></span>
+          </div>
+
+        </div>
       </div>
 
     </main>
