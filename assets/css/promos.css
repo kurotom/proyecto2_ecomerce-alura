@@ -1,0 +1,30 @@
+@import "./index.css";
+
+
+#mainPromos {
+  background-color: var(--color-fondo);
+  padding-bottom: 5rem;
+  min-height: 100vh;
+}
+
+#title {
+  padding-top: 1rem;
+  margin-right: 7rem;
+  margin-left: 7rem;
+  margin-bottom: 1rem;
+}
+#title__category {
+  color: var(--color-precio);
+  font-weight: bold;
+  font-size: 25px;
+}
+#promos__body {
+  margin-right: 7rem;
+  margin-left: 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  row-gap: 5rem;
+}

@@ -1,153 +1,391 @@
 {
-	"productos": [
-		{
-			"name": "product0",
-			"id": "2e9bf729-dee5-48b7-b40c-db939ddb7aad",
-			"cat": 1,
-			"price": 56,
-			"img": "assets/img/unsplash_4OHkK555s1A.png"
-		},
-		{
-			"name": "product1",
-			"id": "5ff8d8c4-cfb9-420c-8479-f49ba1d46d09",
-			"cat": 1,
-			"price": 48,
-			"img": "assets/img/unsplash_1VV1MRafd7A.png"
-		},
-		{
-			"name": "product2",
-			"id": "8f7eb5ba-cf3f-46f9-89b5-fb331a1a78e7",
-			"cat": 1,
-			"price": 62,
-			"img": "assets/img/unsplash_6FDXGY9J6y4.png"
-		},
-		{
-			"name": "product3",
-			"id": "1593df90-d6ce-44c0-9f61-d19985c416bf",
-			"cat": 1,
-			"price": 28,
-			"img": "assets/img/unsplash_epRFE_hBNjo.png"
-		},
-		{
-			"name": "product4",
-			"id": "5b11df91-7108-47c7-bb57-b81d19f406cc",
-			"cat": 1,
-			"price": 44,
-			"img": "assets/img/unsplash_KeGToDVN0l4.png"
-		},
-		{
-			"name": "product5",
-			"id": "012c6ef2-a604-4db7-92bc-9c504668e1f6",
-			"cat": 1,
-			"price": 38,
-			"img": "assets/img/unsplash_R8L1l9RN198.png"
-		},
-		{
-			"name": "product6",
-			"id": "d7270c52-8d71-42eb-9693-487e0479d4f5",
-			"cat": 2,
-			"price": 69,
-			"img": "assets/img/unsplash_0POwK6iAiRQ.png"
-		},
-		{
-			"name": "product7",
-			"id": "53945574-5d0c-49c0-a438-58b660843f24",
-			"cat": 2,
-			"price": 34,
-			"img": "assets/img/unsplash_bUgaIaZysH0.png"
-		},
-		{
-			"name": "product8",
-			"id": "92976012-c30c-4069-9d96-4f9c1939bd02",
-			"cat": 2,
-			"price": 67,
-			"img": "assets/img/unsplash_caNzzoxls8Q.png"
-		},
-		{
-			"name": "product9",
-			"id": "a64c13a6-8c65-4392-b743-6ef1c8cf2c4e",
-			"cat": 2,
-			"price": 30,
-			"img": "assets/img/unsplash_k-xYhI3-gJM.png"
-		},
-		{
-			"name": "product10",
-			"id": "982b7341-1144-4be3-8ccb-addb83dfec03",
-			"cat": 2,
-			"price": 58,
-			"img": "assets/img/unsplash_ZV7lnfyQLmA.png"
-		},
-		{
-			"name": "product11",
-			"id": "623d723b-b876-43da-8346-0ffe211e81ec",
-			"cat": 2,
-			"price": 59,
-			"img": "assets/img/unsplash_Zjn4dT993-g.png"
-		},
-		{
-			"name": "product12",
-			"id": "2feae699-262e-499d-a041-3556e583a0a4",
-			"cat": 3,
-			"price": 43,
-			"img": "assets/img/unsplash_sYVY_ZKwaxU.png"
-		},
-		{
-			"name": "product13",
-			"id": "4ef85bb2-6a82-4aef-b493-3e2640655917",
-			"cat": 3,
-			"price": 43,
-			"img": "assets/img/unsplash_R8L1l9RN198.png"
-		},
-		{
-			"name": "product14",
-			"id": "67c2142e-4635-4546-acfc-fb86af1adaf7",
-			"cat": 3,
-			"price": 49,
-			"img": "assets/img/unsplash_r27umXAelDc.png"
-		},
-		{
-			"name": "product15",
-			"id": "26a9a3f4-6cbb-4647-806d-233dbbaa210d",
-			"cat": 3,
-			"price": 57,
-			"img": "assets/img/unsplash_MxVkWPiJALs.png"
-		},
-		{
-			"name": "product16",
-			"id": "a91605c8-98d9-4086-bee3-17ecac33dcff",
-			"cat": 3,
-			"price": 38,
-			"img": "assets/img/unsplash_jMT6BrgBuXU.png"
-		},
-		{
-			"name": "product17",
-			"id": "6c2dd12e-6fbb-4273-a66a-1d1a9dec85b2",
-			"cat": 3,
-			"price": 30,
-			"img": "assets/img/unsplash_fMP-oCze3AY.png"
-		}
-	],
-	"category": [
-		{
-			"id": 1,
-			"name": "Star wars"
-		},
-		{
-			"id": 2,
-			"name": "Diversos"
-		},
-		{
-			"id": 3,
-			"name": "Consolas"
-		}
-	],
-	"users": [
-		{
-			"uuid": "d6ef1ea2-1b9e-45e6-883a-26caaed90973",
-			"name": "admin",
-			"pass": "password-admin-hash",
-			"email": "admin-geek@ecommerce.com",
-			"isadmin": true
-		}
-	]
+  "productos": [
+    {
+      "name": "product0",
+      "id": "2e9bf729-dee5-48b7-b40c-db939ddb7aad",
+      "cat": 1,
+      "price": 56,
+      "img": "assets/img/unsplash_4OHkK555s1A.png",
+      "desc": ""
+    },
+    {
+      "name": "product1",
+      "id": "5ff8d8c4-cfb9-420c-8479-f49ba1d46d09",
+      "cat": 1,
+      "price": 48,
+      "img": "assets/img/unsplash_1VV1MRafd7A.png",
+      "desc": ""
+    },
+    {
+      "name": "product2",
+      "id": "8f7eb5ba-cf3f-46f9-89b5-fb331a1a78e7",
+      "cat": 1,
+      "price": 62,
+      "img": "assets/img/unsplash_6FDXGY9J6y4.png",
+      "desc": ""
+    },
+    {
+      "name": "product3",
+      "id": "1593df90-d6ce-44c0-9f61-d19985c416bf",
+      "cat": 1,
+      "price": 28,
+      "img": "assets/img/unsplash_epRFE_hBNjo.png",
+      "desc": ""
+    },
+    {
+      "name": "product4",
+      "id": "5b11df91-7108-47c7-bb57-b81d19f406cc",
+      "cat": 1,
+      "price": 44,
+      "img": "assets/img/unsplash_KeGToDVN0l4.png",
+      "desc": ""
+    },
+    {
+      "name": "product5",
+      "id": "012c6ef2-a604-4db7-92bc-9c504668e1f6",
+      "cat": 1,
+      "price": 38,
+      "img": "assets/img/unsplash_R8L1l9RN198.png",
+      "desc": ""
+    },
+    {
+      "name": "product6",
+      "id": "d7270c52-8d71-42eb-9693-487e0479d4f5",
+      "cat": 2,
+      "price": 69,
+      "img": "assets/img/unsplash_0POwK6iAiRQ.png",
+      "desc": ""
+    },
+    {
+      "name": "product7",
+      "id": "53945574-5d0c-49c0-a438-58b660843f24",
+      "cat": 2,
+      "price": 34,
+      "img": "assets/img/unsplash_bUgaIaZysH0.png",
+      "desc": ""
+    },
+    {
+      "name": "product8",
+      "id": "92976012-c30c-4069-9d96-4f9c1939bd02",
+      "cat": 2,
+      "price": 67,
+      "img": "assets/img/unsplash_caNzzoxls8Q.png",
+      "desc": ""
+    },
+    {
+      "name": "product9",
+      "id": "a64c13a6-8c65-4392-b743-6ef1c8cf2c4e",
+      "cat": 2,
+      "price": 30,
+      "img": "assets/img/unsplash_k-xYhI3-gJM.png",
+      "desc": ""
+    },
+    {
+      "name": "product10",
+      "id": "982b7341-1144-4be3-8ccb-addb83dfec03",
+      "cat": 2,
+      "price": 58,
+      "img": "assets/img/unsplash_ZV7lnfyQLmA.png",
+      "desc": ""
+    },
+    {
+      "name": "product11",
+      "id": "623d723b-b876-43da-8346-0ffe211e81ec",
+      "cat": 2,
+      "price": 59,
+      "img": "assets/img/unsplash_Zjn4dT993-g.png",
+      "desc": ""
+    },
+    {
+      "name": "product12",
+      "id": "2feae699-262e-499d-a041-3556e583a0a4",
+      "cat": 3,
+      "price": 43,
+      "img": "assets/img/unsplash_sYVY_ZKwaxU.png",
+      "desc": ""
+    },
+    {
+      "name": "product13",
+      "id": "4ef85bb2-6a82-4aef-b493-3e2640655917",
+      "cat": 3,
+      "price": 43,
+      "img": "assets/img/unsplash_R8L1l9RN198.png",
+      "desc": ""
+    },
+    {
+      "name": "product14",
+      "id": "67c2142e-4635-4546-acfc-fb86af1adaf7",
+      "cat": 3,
+      "price": 49,
+      "img": "assets/img/unsplash_r27umXAelDc.png",
+      "desc": ""
+    },
+    {
+      "name": "product15",
+      "id": "26a9a3f4-6cbb-4647-806d-233dbbaa210d",
+      "cat": 3,
+      "price": 57,
+      "img": "assets/img/unsplash_MxVkWPiJALs.png",
+      "desc": ""
+    },
+    {
+      "name": "product16",
+      "id": "a91605c8-98d9-4086-bee3-17ecac33dcff",
+      "cat": 3,
+      "price": 38,
+      "img": "assets/img/unsplash_jMT6BrgBuXU.png",
+      "desc": ""
+    },
+    {
+      "name": "product17",
+      "id": "6c2dd12e-6fbb-4273-a66a-1d1a9dec85b2",
+      "cat": 3,
+      "price": 30,
+      "img": "assets/img/unsplash_fMP-oCze3AY.png",
+      "desc": ""
+    },
+    {
+      "id": "ddf77007-c2c6-4d7b-8127-b33d78b3429d",
+      "name": "Un pato",
+      "cat": 1,
+      "price": "100",
+      "img": "http://localhost.com",
+      "desc": "cuack"
+    },
+    {
+      "id": "6ddd0e07-ea4f-4554-a47b-73125f63fb4d",
+      "name": "Cocina leña",
+      "cat": "Cocina",
+      "price": "100",
+      "img": "http://localhost.com",
+      "desc": "una cocina usada a leña"
+    },
+    {
+      "id": "581bf312-cb40-443e-947f-77ffcdb42d15",
+      "name": "coca cola",
+      "cat": "Bebida",
+      "price": "10",
+      "img": "http://localhost.com",
+      "desc": "una coca"
+    },
+    {
+      "id": "e831dca4-648c-4199-aeb1-60dc5895eb29",
+      "name": "palo 1",
+      "cat": "un palo",
+      "price": "10",
+      "img": "http://localhost.com",
+      "desc": "sda"
+    },
+    {
+      "id": "fe876894-9999-461e-8c8f-9681dff1129c",
+      "name": "masa",
+      "cat": "masa kilo",
+      "price": "10",
+      "img": "http://localhost.com",
+      "desc": "masa"
+    },
+    {
+      "id": "0d86fbc1-a6c1-4577-a153-9993f2c09372",
+      "name": "saddsa",
+      "cat": "kokokkoko",
+      "price": "10",
+      "img": "http://localhost.com",
+      "desc": "sda"
+    },
+    {
+      "id": "a80ec854-7bf5-45e3-821c-bf8fb28562aa",
+      "name": "dsaasd",
+      "cat": "lokoklo",
+      "price": "10",
+      "img": "http://localhost.com",
+      "desc": "sad"
+    },
+    {
+      "id": "bc252db5-4d93-4c4b-af9e-88b868fb3f6c",
+      "name": "adsasdads",
+      "cat": "unaImagen",
+      "price": "10000",
+      "img": "http://localhost.com",
+      "desc": "adsdas"
+    },
+    {
+      "id": "7c9c2c67-b261-4345-88de-185a8cccca2d",
+      "name": "dsaasd",
+      "cat": "qwerqweasd",
+      "price": "111",
+      "img": "http://localhost.com",
+      "desc": "asd"
+    },
+    {
+      "id": "e50680ae-2a83-4810-94a3-f9d81288f9fe",
+      "name": "1221323",
+      "cat": "sdasdsadsa",
+      "price": "9009",
+      "img": "http://localhost.com",
+      "desc": "lplpñ"
+    },
+    {
+      "id": "dafc089a-6d15-438e-9779-4620f2205286",
+      "name": "adsdsaasddsaasdsda",
+      "cat": "dasasdasddsa",
+      "price": "123",
+      "img": "http://localhost.com",
+      "desc": "asddasdadsasad"
+    },
+    {
+      "id": "c6853d99-6adb-4a62-bee5-929144ca5b9d",
+      "name": "dsad",
+      "cat": 13,
+      "price": "123",
+      "img": "http://localhost.com",
+      "desc": "sasad"
+    },
+    {
+      "id": "958df7ec-8780-4ad8-85c0-d672dcb4e9dd",
+      "name": "sd",
+      "cat": "123ads",
+      "price": "123",
+      "img": "http://sdadsds.c",
+      "desc": "asd"
+    },
+    {
+      "id": "fe1615e7-22ea-43f2-a507-76f8027d0ed3",
+      "name": "adsadasd",
+      "cat": "898989",
+      "price": "2929",
+      "img": "http://loclaads.com",
+      "desc": "asdsa"
+    },
+    {
+      "id": "96f015bb-df6f-4162-9c02-8ab5eefc1f0f",
+      "name": "2132123321",
+      "cat": "daasdsdasdadsasa",
+      "price": "21321321",
+      "img": "http://dasdsadsa.com",
+      "desc": "lplplp"
+    },
+    {
+      "id": "99f23ed8-77a1-4516-8a86-a0f11eee300f",
+      "name": "989809809",
+      "cat": "0238213",
+      "price": "890890808080",
+      "img": "http://2312312312331.co",
+      "desc": "das132"
+    },
+    {
+      "id": "92569ba1-f36d-42a5-a05e-07d2861c18f2",
+      "name": "dsasdads",
+      "cat": "12321",
+      "price": "1312",
+      "img": "http://dads.com",
+      "desc": "dsads"
+    },
+    {
+      "id": "81a3316b-2bcd-4ba8-9c1c-ea96ce50d645",
+      "name": "asadsda",
+      "cat": 3,
+      "price": "213",
+      "img": "http://132312ad.com",
+      "desc": "sda"
+    },
+    {
+      "id": "11a0208c-0ebf-4b36-95db-74f06aef078f",
+      "name": "asdsadsa",
+      "cat": 5,
+      "price": "123",
+      "img": "http://132.com",
+      "desc": "sasd"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Star wars"
+    },
+    {
+      "id": 2,
+      "name": "Consolas"
+    },
+    {
+      "id": 3,
+      "name": "Diversos"
+    },
+    {
+      "name": "Cocina",
+      "id": 4
+    },
+    {
+      "name": "Bebida",
+      "id": 5
+    },
+    {
+      "name": "un palo",
+      "id": 6
+    },
+    {
+      "name": "masa kilo",
+      "id": 7
+    },
+    {
+      "name": "kokokkoko",
+      "id": 8
+    },
+    {
+      "name": "lokoklo",
+      "id": 9
+    },
+    {
+      "name": "unaImagen",
+      "id": 10
+    },
+    {
+      "name": "hhhhhhhh",
+      "id": 11
+    },
+    {
+      "name": "qwerqweasd",
+      "id": 12
+    },
+    {
+      "name": "sdasdsadsa",
+      "id": 13
+    },
+    {
+      "name": "pñlopñloooii",
+      "id": 14
+    },
+    {
+      "name": "dasasdasddsa",
+      "id": 15
+    },
+    {
+      "name": "123ads",
+      "id": 16
+    },
+    {
+      "name": "898989",
+      "id": 17
+    },
+    {
+      "name": "daasdsdasdadsasa",
+      "id": 18
+    },
+    {
+      "name": "0238213",
+      "id": 19
+    },
+    {
+      "name": "12321",
+      "id": 20
+    }
+  ],
+  "users": [
+    {
+      "uuid": "d6ef1ea2-1b9e-45e6-883a-26caaed90973",
+      "name": "admin",
+      "pass": "password-admin-hash",
+      "email": "admin-geek@ecommerce.com",
+      "isadmin": true
+    }
+  ]
 }

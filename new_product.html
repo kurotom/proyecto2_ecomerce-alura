@@ -25,10 +25,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
-
+    <!-- cdn packages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Scripts -->
-    <script type="text/javascript" src="./assets/js/index.js"></script>
+    <script type="module" src="./assets/js/newproduct.js"></script>
 
 
     <title>Proyecto Ecommerce</title>
@@ -52,8 +53,7 @@
           </form>
         </li>
         <li>
-          <a href="login.html">MENU ADMIN</a>
-          <!-- <a href="login.html">Login</a> -->
+          <a id="loginBtn" href="login.html">Login</a>
         </li>
       </ul>
     </nav>
@@ -62,34 +62,58 @@
     <main id="maincontent">
 
       <div id="newproduct" class="">
+
+        <div id="mensaje_create" class="" data-mensaje>
+          <div id="mensaje_create-div" data-mensaje-div>
+            <div id="mensaje_create-span" data-mensaje-span>
+            </div>
+            <span id="closeX" title="Close" >x</span>
+          </div>
+        </div>
+
         <div id="newproduct__title" class="">
           <h1>Agregar nuevo producto</h1>
         </div>
-        <form id="newproduct__form" class="" action="index.html" method="post">
+        <form id="newproduct__form" class="" data-form-new>
 
           <fieldset class="fieldsetForm">
             <span>URL de la imagen</span>
-            <input type="text" name="" value="">
+            <input type="url" name="" value="" data-form-url required>
           </fieldset>
 
           <fieldset class="fieldsetForm">
             <span>Categoría</span>
-            <input type="text" name="" value="">
+            <div id="categoria" class="">
+              <div id="categoria__existente" class="">
+                <span>Existente</span>
+                <select class="" name="" data-form-category-select>
+                  <option value="0" selected>Seleccione</option>
+                </select>
+              </div>
+
+              <div id="categoria__nueva" class="">
+                <span>Nueva</span>
+                <input type="text" name="" value="" minlength="5" maxlength="20" data-form-categoria >
+              </div>
+            </div>
           </fieldset>
 
           <fieldset class="fieldsetForm">
             <span>Nombre del producto</span>
-            <input type="text" name="" value="">
+            <input type="text" name="" value="" data-form-nombre required>
           </fieldset>
 
           <fieldset class="fieldsetForm">
             <span>Precio del producto</span>
-            <input type="text" name="" value="">
+            <div id="priceField" class="">
+              <span id="priceField__span">$</span>
+              <input id="priceField__price" type="number" min="1" name="" value="0" step="0.1" data-form-precio required>
+            </div>
           </fieldset>
 
           <fieldset class="fieldsetForm">
             <span>Descripción del producto</span>
-            <input type="text" name="" value="">
+            <input type="text" name="" value="" data-form-descripcion required>
           </fieldset>
 
           <button type="submit" name="button">Agregar producto</button>

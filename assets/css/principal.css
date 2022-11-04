@@ -88,10 +88,12 @@
   background-size: cover;
   background-position: center;
   height: 20rem;
+  width: auto;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
 }
 
 #banner img {
@@ -108,6 +110,7 @@
   color: white;
   row-gap: 1rem;
   bottom: 3rem;
+  width: 80% !important;
   /* text-shadow: 0 2px 6px black; */
 }
 #banner__divs h1 {
@@ -202,6 +205,7 @@
 .producto img {
   box-shadow: 0px 1px 5px gray;
   border-radius: 2px;
+  margin-bottom: 1rem;
 }
 
 .producto__info {

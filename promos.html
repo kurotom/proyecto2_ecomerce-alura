@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/principal.css">
     <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/promos.css">
     <link rel="stylesheet" href="./assets/css/new_product.css">
     <link rel="stylesheet" href="./assets/css/all_products.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
@@ -28,7 +29,7 @@
 
 
     <!-- Scripts -->
-    <script type="module" src="./assets/js/productos.js"></script>
+    <script type="module" src="./assets/js/promos.js"></script>
 
 
     <title>Proyecto Ecommerce</title>
@@ -38,7 +39,7 @@
 
     <nav id="navbar">
       <ul>
-        <li>
+        <li id="">
           <a href="/">
             <img src="./assets/img/Logo.png" alt="logo">
           </a>
@@ -48,7 +49,6 @@
             <fieldset>
               <input type="text" name="" value="" placeholder="Buscar...">
             </fieldset>
-
           </form>
         </li>
         <li>
@@ -58,20 +58,13 @@
     </nav>
 
 
-    <main id="maincontent">
+    <main id="mainPromos">
 
-      <div id="all" class="">
-
-        <div id="all__head" class="">
-          <span>Todos los productos</span>
-          <a id="addBtn" href="new_product.html">Agregar producto</a>
-        </div>
-
-        <div id="all__body" class="">
-        </div>
-
+      <div id="title">
+        <h1 id="title__category" data-title-category></h1>
       </div>
-
+      <div id="promos__body" class="">
+      </div>
 
     </main>
 
