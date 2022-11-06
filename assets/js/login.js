@@ -12,9 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // formulario login
   const loginDiv = document.querySelector("[data-login]");
-  const formulario = document.querySelector("[data-form]");
+  const formularioLogin = document.querySelector("[data-form]");
   let email = document.querySelector("[data-form-email]");
   let password = document.querySelector("[data-form-password]");
+  let btnCreateAccount = document.querySelector("[data-create-span]");
   //
 
   //  panel control usuario
@@ -26,33 +27,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // formulario crear cuenta
   let conenedorCreate = document.querySelector("[data-contenedor-create]");
+
   let formularioCreate = document.querySelector("[data-register-form]");
   let nameNewUser = document.querySelector("[data-register-name]");
-  let emialNewUser = document.querySelector("[data-register-email]");
+  let emailNewUser = document.querySelector("[data-register-email]");
   let pass1NewUser = document.querySelector("[data-register-pass1]");
   let pass2NewUser = document.querySelector("[data-register-pass2]");
   let btnSubmitCreate = document.querySelector("[data-register-btnSubmit]");
-  let btnCreateAccount = document.querySelector("[data-create-span]");
+
   let cancelCreateUser = document.querySelector("[data-create-cancel]");
   //
 
 
+  //
   barraSearch();
-  // 
+  //
 
-  cancelCreateUser.addEventListener("click", () => {
-    conenedorCreate.style.display = "none";
-    loginDiv.style.display = "flex";
-    panelUser.style.display = "none";
-  })
-
-  btnCreateAccount.addEventListener("click", (evento) => {
-    conenedorCreate.style.display = "flex";
-    loginDiv.style.display = "none";
-    panelUser.style.display = "none";
-  })
-
-
+  //
+  // HANDLE ACCOUNT SHOW OR SHOW LOGIN/REGISTER
   let userData = JSON.parse(window.localStorage.getItem("user"));
   if (userData !== null && Object.keys(userData).length > 0) {
     conenedorCreate.style.display = "none";
@@ -73,7 +65,35 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
 
-  formulario.addEventListener("submit", (evento) => {
+//
+// BUTTONS HANDLE CREATE-CANCEL CREATE NEW ACCOUNT
+  btnCreateAccount.addEventListener("click", (evento) => {
+    conenedorCreate.style.display = "flex";
+    loginDiv.style.display = "none";
+    panelUser.style.display = "none";
+  })
+  cancelCreateUser.addEventListener("click", () => {
+    conenedorCreate.style.display = "none";
+    loginDiv.style.display = "flex";
+    panelUser.style.display = "none";
+  })
+//
+//
+
+
+
+//
+//  Formulario CREATE ACCOUNT
+  formularioCreate.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+
+  });
+
+
+
+//
+//  Formulario LOGIN ACCOUNT
+  formularioLogin.addEventListener("submit", (evento) => {
     evento.preventDefault();
 
     contenedorMSG.style.display = 'none';
@@ -134,18 +154,12 @@ document.addEventListener('DOMContentLoaded', () => {
       contenedorMSG.style.display = "flex";
     }
 
-  })
+  });
 
 
   btnCloseMSG.addEventListener('click', () => {
     contenedorMSG.style.display = 'none';
     spanMSG.innerText = "";
-  })
+  });
 
-
-
-
-
-
-
-})
+});

@@ -47,8 +47,8 @@
           <form id="navbar__search-form" class="" data-search>
             <fieldset>
               <input type="text" name="" value="" placeholder="Buscar..." data-search-input>
+              <button id="navbar__search-submit" type="submit" name="button" title="Buscar"></button>
             </fieldset>
-            <button id="navbar__search-submit" type="submit" name="button" title="Buscar"></button>
           </form>
         </li>
         <!-- <li>
@@ -71,10 +71,10 @@
         <span class="span-title-form" >Iniciar Sesión</span>
         <form id="login__form" class="formulario" data-form>
           <fieldset>
-            <input class="login__input" type="email" name="email" value="" placeholder="Escriba su correo electrónico" data-form-email>
+            <input class="login__input" type="email" required name="email" value="" placeholder="Escriba su correo electrónico" data-form-email >
           </fieldset>
           <fieldset>
-            <input class="login__input" type="password" name="password" value="" minlength="4" placeholder="Escriba su contraseña" data-form-password>
+            <input class="login__input" type="password" required name="password" value="" minlength="4" placeholder="Escriba su contraseña" data-form-password >
           </fieldset>
           <button class="button__submit" type="submit" name="button">Entrar</button>
         </form>
@@ -90,13 +90,13 @@
             <input class="login__input" type="text" name="" value="" placeholder="Nombre" required data-register-name>
           </fieldset>
           <fieldset>
-            <input class="login__input" type="text" name="" value="" placeholder="Email" required data-register-email>
+            <input class="login__input" type="email" name="" value="" placeholder="Email" required data-register-email>
           </fieldset>
           <fieldset>
-            <input class="login__input" type="text" name="" value="" placeholder="Contraseña" required data-register-pass1>
+            <input class="login__input" type="password" name="" value="" placeholder="Contraseña" required data-register-pass1>
           </fieldset>
           <fieldset>
-            <input class="login__input" type="text" name="" value="" placeholder="Repita contraseña" required data-register-pass2>
+            <input class="login__input" type="password" name="" value="" placeholder="Repita contraseña" required data-register-pass2>
           </fieldset>
           <div class="div-span-form">
             <button class="button__submit" type="submit" name="button" data-register-btnSubmit>Crear</button>

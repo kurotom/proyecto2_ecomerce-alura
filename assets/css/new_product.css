@@ -1,5 +1,14 @@
 @import "./index.css";
 
+#navbar {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+#navbar ul {
+  justify-content: space-between;
+}
+
 
 #maincontent {
   background-color: white;
