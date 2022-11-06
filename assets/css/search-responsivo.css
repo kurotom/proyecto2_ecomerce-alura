@@ -22,6 +22,10 @@
     min-height: 50vh;
   }
 
+  #footer {
+    margin-top: 4rem;
+  }
+
 }
 
 
@@ -48,6 +52,7 @@
   }
 
   #footer {
+    margin-top: 4rem;
   }
 
 }

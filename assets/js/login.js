@@ -1,4 +1,5 @@
 import { fetchData } from './handlers/fetch_get.js';
+import { barraSearch } from './componentes/searchComponent.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,6 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
   let btnCreateAccount = document.querySelector("[data-create-span]");
   let cancelCreateUser = document.querySelector("[data-create-cancel]");
   //
+
+
+  barraSearch();
+  // 
 
   cancelCreateUser.addEventListener("click", () => {
     conenedorCreate.style.display = "none";

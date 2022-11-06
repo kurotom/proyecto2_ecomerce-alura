@@ -1,0 +1,53 @@
+@import "./index.css";
+
+@media screen and (max-width: 500px) {
+  #maincontent__desc {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  #description__datos {
+    padding-left: 0;
+    padding-right: 0;
+
+  }
+  #similares {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+  #mainDescription {
+    min-height: 80vh;
+  }
+
+  #maincontent__desc {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  #description__datos {
+    padding-left: 0;
+    padding-right: 0;
+
+  }
+  #similares {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #similares__body {
+    flex-wrap: wrap;
+  }
+
+  .similares__productos:nth-child(-n+4) {
+    display: flex;
+    width: 31.7%;
+  }
+  #footer {
+    margin-top: 0;
+  }
+}

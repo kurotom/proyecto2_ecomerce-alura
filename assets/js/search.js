@@ -1,9 +1,13 @@
 import { barraSearch } from './componentes/searchComponent.js';
 import { showSearchItems } from './componentes/searchComponent.js';
+import { loginBoton } from './componentes/botonLogin.js';
+
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  loginBoton();
 
   barraSearch();
 

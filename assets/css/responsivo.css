@@ -96,7 +96,7 @@
 
 
   #all {
-    padding: 3rem 2rem 3rem 2rem;
+    padding: 3rem 2rem 7rem 2rem;
   }
   #all .producto {
     display: flex;
@@ -214,7 +214,7 @@
   }
 
   #all {
-    padding: 3rem 2rem 3rem 2rem;
+    padding: 3rem 2rem 7rem 2rem;
   }
   #all__body {
     justify-content: flex-start;

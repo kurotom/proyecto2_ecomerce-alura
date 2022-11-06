@@ -1,6 +1,6 @@
 import { handleProductos } from './componentes/createContentItems.js';
 import { loginBoton } from './componentes/botonLogin.js';
-
+import { barraSearch } from './componentes/searchComponent.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -18,8 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+  barraSearch();
 
   loginBoton();
+
   handleProductos(contenedorProductos);
 
 

@@ -78,7 +78,7 @@
   font-weight: bold;
 }
 
-#navbar ul li:last-child {
+#navbar #navbar__search {
   display: flex;
   flex-direction: column;
   justify-content: center;

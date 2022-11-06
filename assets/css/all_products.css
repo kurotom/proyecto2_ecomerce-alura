@@ -3,7 +3,7 @@
 #all {
   background-color: var(--color-fondo);
 
-  padding: 3rem 7rem 3rem 7rem;
+  padding: 3rem 7rem 7rem 7rem;
 
   display: flex;
   flex-direction: column;
@@ -45,6 +45,7 @@
   flex-wrap: wrap;
   column-gap: 1rem;
   row-gap: 5rem;
+  padding-bottom: 7rem;
 }
 
 .producto {

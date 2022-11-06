@@ -1,0 +1,37 @@
+@import "./index.css";
+
+@media screen and (max-width: 500px) {
+  #title {
+    width: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  #promos__body {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  .producto:nth-child(+n) {
+    display: flex;
+    width: 47%;
+  }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  #mainPromos {
+    min-height: 60vh;
+  }
+  #title {
+    width: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  #promos__body {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  .producto:nth-child(+n) {
+    display: flex;
+    width: auto;
+  }
+}

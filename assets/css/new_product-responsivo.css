@@ -1,0 +1,37 @@
+@import "./index.css";
+
+
+@media screen and (max-width: 500px) {
+  #newproduct {
+    justify-content: normal;
+    margin-bottom: 0;
+  }
+  #newproduct__title {
+    width: auto;
+  }
+  #newproduct__form {
+    width: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  #newproduct {
+    justify-content: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+    min-height: 60vh;
+
+  }
+  #newproduct__title {
+    width: auto;
+  }
+  #newproduct__form {
+    width: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+}

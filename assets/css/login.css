@@ -6,6 +6,11 @@
   font-family: 'Raleway', sans-serif;
 }
 
+#navbar ul {
+  justify-content: flex-start;
+  column-gap: 2rem;
+}
+
 #message {
   text-align: center;
   height: 3rem;

@@ -3,15 +3,14 @@ import { handleForm } from './componentes/formularioNewProduct.js';
 import { selectHandler } from './componentes/formularioNewProduct.js';
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
 
+  
   loginBoton();
 
   selectHandler();
 
   handleForm();
-
 
   let mensajeContent = document.querySelector("[data-mensaje-div]");
   let mensajeBanner = document.querySelector("[data-mensaje-span]");

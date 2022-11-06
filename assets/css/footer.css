@@ -11,7 +11,6 @@
   flex-direction: column;
   height: 20rem;
   color: var(--color-precio);
-  margin-top: 3rem;
 }
 
 #footer__datos {
