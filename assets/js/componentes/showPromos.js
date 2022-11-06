@@ -1,4 +1,4 @@
-import fetchData from '../handlers/fetch_get.js';
+import { fetchData } from '../handlers/fetch_get.js';
 import { handleProductos } from './createContentItems.js';
 
 
@@ -33,7 +33,7 @@ export const itemsPromos = (url, contenedor) => {
 
 
       if (productos.length > 0) {
-        console.log(productos)
+        // console.log(productos)
 
         handleProductos(contenedor, productos)
 

@@ -29,7 +29,7 @@
 
 
     <!-- Scripts -->
-    <script type="text/javascript" src="./assets/js/index.js"></script>
+    <script type="module" src="./assets/js/descripcion.js"></script>
 
 
     <title>Proyecto Ecommerce</title>
@@ -40,99 +40,41 @@
     <nav id="navbar">
       <ul>
         <li id="">
-          <a href="index.html">
+          <a href="/">
             <img src="./assets/img/Logo.png" alt="logo">
           </a>
         </li>
-        <li id="navbar__form">
-          <form class="" action="index.html" method="post">
+        <li id="navbar__search">
+          <form id="navbar__search-form" class="" data-search>
             <fieldset>
-              <input type="text" name="" value="" placeholder="Buscar...">
+              <input type="text" name="" value="" placeholder="Buscar..." data-search-input>
             </fieldset>
+            <button id="navbar__search-submit" type="submit" name="button" title="Buscar"></button>
           </form>
         </li>
         <!-- <li>
-          <a href="login.html">Login</a>
+          <a id="loginBtn" href="login.html">Login</a>
         </li> -->
       </ul>
     </nav>
 
 
-    <main id="maincontent__desc">
+    <main id="mainDescription">
 
-      <div id="description" class="">
-        <img id="description__img" src="./assets/img/unsplash_epRFE_hBNjo.png" alt="productos">
-        <div id="description__datos" class="">
-          <h1>Producto XYZ</h1>
-          <span>$ 60.00</span>
-          <p>
-            Voluptas voluptatum quibusdam similique, class debitis alias maecenas
-            eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada
-            habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin
-            expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus
-            vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta
-            anim magnam.
-          </p>
+      <div id="maincontent__desc" class="">
+
+        <div id="description" class="" data-descripcion-producto>
+        </div>
+
+        <div id="similares" class="">
+          <div id="similares__head" class="">
+            <h1>Productos similares</h1>
+          </div>
+          <div id="similares__body" class="" data-content-similares>
+          </div>
         </div>
       </div>
 
-      <div id="similares" class="">
-        <div id="similares__head" class="">
-          <h1>Productos similares</h1>
-        </div>
-        <div id="similares__body" class="">
-
-          <div class="similares__productos">
-            <img src="./assets/img/unsplash_R8L1l9RN198.png" alt="productos">
-            <div class="producto__info">
-              <span>Producto XYZ</span>
-              <span>$ 60,00</span>
-              <a href="#">Ver producto</a>
-            </div>
-          </div>
-          <div class="similares__productos">
-            <img src="./assets/img/unsplash_0POwK6iAiRQ.png" alt="productos">
-            <div class="producto__info">
-              <span>Producto XYZ</span>
-              <span>$ 60,00</span>
-              <a href="#">Ver producto</a>
-            </div>
-          </div>
-          <div class="similares__productos">
-            <img src="./assets/img/unsplash_bUgaIaZysH0.png" alt="productos">
-            <div class="producto__info">
-              <span>Producto XYZ</span>
-              <span>$ 60,00</span>
-              <a href="#">Ver producto</a>
-            </div>
-          </div>
-          <div class="similares__productos">
-            <img src="./assets/img/unsplash_caNzzoxls8Q.png" alt="productos">
-            <div class="producto__info">
-              <span>Producto XYZ</span>
-              <span>$ 60,00</span>
-              <a href="#">Ver producto</a>
-            </div>
-          </div>
-          <div class="similares__productos">
-            <img src="./assets/img/unsplash_ZV7lnfyQLmA.png" alt="productos">
-            <div class="producto__info">
-              <span>Producto XYZ</span>
-              <span>$ 60,00</span>
-              <a href="#">Ver producto</a>
-            </div>
-          </div>
-          <div class="similares__productos">
-            <img src="./assets/img/unsplash_Zjn4dT993-g.png" alt="productos">
-            <div class="producto__info">
-              <span>Producto XYZ</span>
-              <span>$ 60,00</span>
-              <a href="#">Ver producto</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
 
     </main>
 

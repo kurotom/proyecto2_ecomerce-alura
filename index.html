@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/search.css">
     <link rel="stylesheet" href="./assets/css/principal.css">
     <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="stylesheet" href="./assets/css/new_product.css">
@@ -43,11 +44,12 @@
             <img src="./assets/img/Logo.png" alt="logo">
           </a>
         </li>
-        <li id="navbar__form">
-          <form class="" action="index.html" method="post">
+        <li id="navbar__search">
+          <form id="navbar__search-form" class="" data-search>
             <fieldset>
-              <input type="text" name="" value="" placeholder="Buscar...">
+              <input type="text" name="" value="" placeholder="Buscar..." data-search-input>
             </fieldset>
+            <button id="navbar__search-submit" type="submit" name="button" title="Buscar"></button>
           </form>
         </li>
         <li>
@@ -57,9 +59,9 @@
     </nav>
 
 
-    <main id="maincontent">
+    <main id="maincontent" data-main>
 
-      <div id="banner" class="">
+      <div id="banner" class="" data-main-banner>
         <div id="banner__divs" class="">
           <h1>Febrero Promocional</h1>
           <span>Productos seleccionados con 33% de descuento</span>
@@ -67,9 +69,10 @@
         </div>
       </div>
 
-      <div id="contenido" class="">
+      <div id="contenido" class="" data-main-contenido>
 
       </div>
+
 
     </main>
 
@@ -94,7 +97,7 @@
 
           <div id="footer__datos-contacto" class="">
             <span>Hable con nosotros</span>
-            <form id="form_contacto" class="" action="index.html" method="post">
+            <form id="form_contacto" class="" data-form-contacto>
               <fieldset id="form_contacto-fs1" class="campos">
                 <input type="text" name="" value="" >
                 <span>Nombre</span>
@@ -115,7 +118,7 @@
 
       <div id="footer__creditos" class="">
         <span>
-          Desarrollado por <span id="me">Tomás Valdivia</span> - <a href="https://github.com/kurotom">kurotom</a>
+          Desarrollado por <span id="me"><a href="https://github.com/kurotom">Tomás Valdivia - kurotom</a></span>
         </span>
         <span>2022</span>
       </div>

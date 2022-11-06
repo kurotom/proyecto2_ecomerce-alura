@@ -23,11 +23,11 @@
     margin-bottom: -10px;
   }
 
-  #navbar__form {
+  #navbar__search {
     width: auto;
   }
 
-  #navbar__form img {
+  #navbar__search img {
     z-index: 1;
     position: relative;
     float: right;

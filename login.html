@@ -38,22 +38,22 @@
 
     <nav id="navbar">
       <ul>
-        <li>
+        <li id="">
           <a href="/">
             <img src="./assets/img/Logo.png" alt="logo">
           </a>
         </li>
-        <li id="navbar__form">
-          <form class="" action="index.html" method="post">
+        <li id="navbar__search">
+          <form id="navbar__search-form" class="" data-search>
             <fieldset>
-              <input type="text" name="" value="" placeholder="Buscar...">
+              <input type="text" name="" value="" placeholder="Buscar..." data-search-input>
             </fieldset>
-
+            <button id="navbar__search-submit" type="submit" name="button" title="Buscar"></button>
           </form>
         </li>
-        <li>
-          <!-- <a href="login.html">Login</a> -->
-        </li>
+        <!-- <li>
+          <a id="loginBtn" href="login.html">Login</a>
+        </li> -->
       </ul>
     </nav>
 
@@ -67,17 +67,44 @@
         </div>
       </div>
 
-      <div id="login" class="" data-login>
-        <span>Iniciar Sesión</span>
-        <form id="login__form" class="" data-form>
+      <div id="login" class="container-form" data-login>
+        <span class="span-title-form" >Iniciar Sesión</span>
+        <form id="login__form" class="formulario" data-form>
           <fieldset>
-            <input type="email" name="email" value="" placeholder="Escriba su correo electrónico" data-form-email>
+            <input class="login__input" type="email" name="email" value="" placeholder="Escriba su correo electrónico" data-form-email>
           </fieldset>
           <fieldset>
-            <input type="password" name="password" value="" minlength="4" placeholder="Escriba su contraseña" data-form-password>
+            <input class="login__input" type="password" name="password" value="" minlength="4" placeholder="Escriba su contraseña" data-form-password>
           </fieldset>
-          <button type="submit" name="button">Entrar</button>
+          <button class="button__submit" type="submit" name="button">Entrar</button>
         </form>
+        <div id="login__create" class="div-span-form" data-create>
+          <span data-create-span>Crear cuenta</span>
+        </div>
+      </div>
+
+      <div id="create" class="container-form" data-contenedor-create>
+        <span class="span-title-form" >Crear cuenta</span>
+        <form id="create__form" class="formulario" data-register-form>
+          <fieldset>
+            <input class="login__input" type="text" name="" value="" placeholder="Nombre" required data-register-name>
+          </fieldset>
+          <fieldset>
+            <input class="login__input" type="text" name="" value="" placeholder="Email" required data-register-email>
+          </fieldset>
+          <fieldset>
+            <input class="login__input" type="text" name="" value="" placeholder="Contraseña" required data-register-pass1>
+          </fieldset>
+          <fieldset>
+            <input class="login__input" type="text" name="" value="" placeholder="Repita contraseña" required data-register-pass2>
+          </fieldset>
+          <div class="div-span-form">
+            <button class="button__submit" type="submit" name="button" data-register-btnSubmit>Crear</button>
+          </div>
+        </form>
+        <div class="div-span-form" >
+          <span data-create-cancel>Cancelar</span>
+        </div>
       </div>
 
       <div id="panel" class="" data-panel>

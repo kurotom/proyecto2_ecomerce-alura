@@ -32,8 +32,8 @@
   cursor: pointer;
 }
 
-#login {
-  min-height: 50vh;
+.container-form {
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@
   margin-bottom: 5rem;
 }
 
-#login span {
+.span-title-form {
   text-align: center;
   color: var(--color-precio);
   font-weight: bold;
@@ -49,14 +49,15 @@
 }
 
 
-#login__form {
+.formulario {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
-#login__form input {
+.login__input {
   height: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -66,7 +67,7 @@
   border: 1px solid gray;
 }
 
-#login__form button {
+.button__submit {
   color: white;
   text-decoration: none;
   background-color: var(--color-boton);
@@ -79,18 +80,51 @@
   font-weight: bold;
   border-radius: 4px;
   border: none;
+  width: 100%;
 }
-#login__form button:hover {
+.button__submit:hover {
   cursor: pointer;
+  font-size: 17px;
 }
 
+.div-span-form {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-span-form span {
+  font-size: 15px;
+  font-weight: normal;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+}
+.div-span-form span:hover {
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0px 1px 5px lightgray;
+  border-radius: 1rem;
+}
+
+/* seccion crear cuenta  */
+#create {
+  display: none;
+}
+
+
+/* seccion panel control usuario */
 #panel {
   display: none;
   flex-direction: column;
-  min-height: 60vh;
+  height: 60vh;
   margin-left: 7rem;
   margin-right: 7rem;
   row-gap: 1rem;
+  margin-bottom: 5rem;
 }
 #panel__control {
   display: flex;

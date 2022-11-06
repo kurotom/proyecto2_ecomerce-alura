@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/search.css">
     <link rel="stylesheet" href="./assets/css/principal.css">
     <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="stylesheet" href="./assets/css/new_product.css">
@@ -15,6 +17,7 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
 
     <link rel="stylesheet" href="./assets/css/responsivo.css">
+    <link rel="stylesheet" href="./assets/css/search-responsivo.css">
 
 
     <!-- fontawesome icons -->
@@ -25,11 +28,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- cdn packages -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <!-- Scripts -->
-    <script type="module" src="./assets/js/newproduct.js"></script>
+    <script type="module" src="./assets/js/search.js"></script>
 
 
     <title>Proyecto Ecommerce</title>
@@ -44,14 +46,14 @@
             <img src="./assets/img/Logo.png" alt="logo">
           </a>
         </li>
-        <!-- <li id="navbar__search">
+        <li id="navbar__search">
           <form id="navbar__search-form" class="" data-search>
             <fieldset>
               <input type="text" name="" value="" placeholder="Buscar..." data-search-input>
             </fieldset>
             <button id="navbar__search-submit" type="submit" name="button" title="Buscar"></button>
           </form>
-        </li> -->
+        </li>
         <li>
           <a id="loginBtn" href="login.html">Login</a>
         </li>
@@ -59,67 +61,13 @@
     </nav>
 
 
-    <main id="maincontent">
+    <main id="maincontent" data-main>
 
-      <div id="newproduct" class="">
-
-        <div id="mensaje_create" class="" data-mensaje>
-          <div id="mensaje_create-div" data-mensaje-div>
-            <div id="mensaje_create-span" data-mensaje-span>
-            </div>
-            <span id="closeX" title="Close" >x</span>
-          </div>
-        </div>
-
-        <div id="newproduct__title" class="">
-          <h1>Agregar nuevo producto</h1>
-        </div>
-        <form id="newproduct__form" class="" data-form-new>
-
-          <fieldset class="fieldsetForm">
-            <span>URL de la imagen</span>
-            <input type="url" name="" value="" data-form-url required>
-          </fieldset>
-
-          <fieldset class="fieldsetForm">
-            <span>Categoría</span>
-            <div id="categoria" class="">
-              <div id="categoria__existente" class="">
-                <span>Existente</span>
-                <select class="" name="" data-form-category-select>
-                  <option value="0" selected>Seleccione</option>
-                </select>
-              </div>
-
-              <div id="categoria__nueva" class="">
-                <span>Nueva</span>
-                <input type="text" name="" value="" minlength="5" maxlength="20" data-form-categoria >
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="fieldsetForm">
-            <span>Nombre del producto</span>
-            <input type="text" name="" value="" data-form-nombre required>
-          </fieldset>
-
-          <fieldset class="fieldsetForm">
-            <span>Precio del producto</span>
-            <div id="priceField" class="">
-              <span id="priceField__span">$</span>
-              <input id="priceField__price" type="number" min="1" name="" value="0" step="0.1" data-form-precio required>
-            </div>
-          </fieldset>
-
-          <fieldset class="fieldsetForm">
-            <span>Descripción del producto</span>
-            <input type="text" name="" value="" data-form-descripcion required>
-          </fieldset>
-
-          <button type="submit" name="button">Agregar producto</button>
-
-        </form>
-
+      <div id="title" class="">
+        <span id="title__data" data-title-search>Resultado de búsqueda:</span>
+        <span id="title__strong" data-title-strong></span>
+      </div>
+      <div id="all__body" class="" data-main-search>
       </div>
 
 
@@ -146,7 +94,7 @@
 
           <div id="footer__datos-contacto" class="">
             <span>Hable con nosotros</span>
-            <form id="form_contacto" class="" action="index.html" method="post">
+            <form id="form_contacto" class="" data-form-contacto>
               <fieldset id="form_contacto-fs1" class="campos">
                 <input type="text" name="" value="" >
                 <span>Nombre</span>
@@ -167,13 +115,14 @@
 
       <div id="footer__creditos" class="">
         <span>
-          Desarrollado por <span id="me">Tomás Valdivia</span> - <a href="https://github.com/kurotom">kurotom</a>
+          Desarrollado por <span id="me"><a href="https://github.com/kurotom">Tomás Valdivia - kurotom</a></span>
         </span>
         <span>2022</span>
       </div>
 
 
     </footer>
+
 
   </body>
 </html>

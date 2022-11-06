@@ -19,7 +19,7 @@ export const showIndex = () => {
 
         let head_producto = `<div id="fila${item.id}__head" class="fila_head">
           <span>${item.name}</span>
-          <a href="productos.html">
+          <a href="productos.html" title="Todos los productos">
             Ver todo
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -40,14 +40,14 @@ export const showIndex = () => {
           let productContent = contenedor.querySelectorAll(".fila__productos")
 
           productContent.forEach(itemParent => {
-            response.map(i => {
-              if (i.cat === parseInt(itemParent.getAttribute('value'))) {
+            response.map(item => {
+              if (item.cat === parseInt(itemParent.getAttribute('value'))) {
                 let productoHTML = `<div class="producto">
-                  <img src="${i.img}" alt="productos">
+                  <img src="${item.img}" alt="productos">
                   <div class="producto__info">
-                    <span>${i.name}</span>
-                    <span>$ ${i.price}</span>
-                    <a href="descripcion.html">Ver producto</a>
+                    <span>${item.name}</span>
+                    <span>$ ${item.price}</span>
+                    <a href="descripcion.html?item=${item.id}" title="Ir al producto">Ver producto</a>
                   </div>
                 </div>`;
 

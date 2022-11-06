@@ -14,17 +14,17 @@
   justify-content: space-between;
   align-items: center;
 }
-#navbar__form {
+#navbar__search {
   width: 25rem;
 }
-#navbar__form form {
+#navbar__search #navbar__search-form {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#navbar__form form fieldset {
+#navbar__search form fieldset {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -32,7 +32,7 @@
   align-items: center;
   border-radius: 1rem;
 }
-#navbar__form form fieldset input {
+#navbar__search form fieldset input {
   background-color: var(--color-fondo);
   width: 100%;
   z-index: 5;
@@ -43,12 +43,26 @@
   padding-right: 1rem;
   font-size: 15px;
 
-  background-image: url(/assets/img/Icone.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-origin: content-box;
-
 }
+#navbar__search-submit {
+  background-image: url("/assets/img/Icone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+  height: 30px;
+  padding: 0;
+  border: 0px;
+  position: relative;
+  right: 2.5rem;
+  z-index: 5;
+  background-color: transparent;
+}
+#navbar__search-submit:hover, #navbar__search-submit:active {
+  background-color: transparent;
+  font-weight: bold;
+  transform: scale(1.2);
+}
+
 /* #navbar__form form img {
   z-index: 1;
   position: relative;
@@ -79,10 +93,10 @@
 
 #banner {
 	/* BANNER PARA GITHUB PAGES */
-	background-image:	url('https://kurotom.github.io/alura/ecommerce/assets/img/banner.png');
+	/* background-image:	url("https://kurotom.github.io/alura/ecommerce/assets/img/banner.png"); */
 
 	/* PARA LOCAL*/
-  /* background-image: url('/assets/img/banner.png'); */
+  background-image: url("/assets/img/banner.png");
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -150,6 +164,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  min-height: 100vh;
 }
 
 .fila_head {
@@ -181,8 +197,8 @@
   flex-direction: column;
   justify-content: center;
   row-gap: 1rem;
-  margin-bottom: 5rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   flex-wrap: wrap;
 }
 
