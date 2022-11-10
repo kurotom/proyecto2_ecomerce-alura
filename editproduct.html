@@ -3,18 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/editproduct.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/search.css">
     <link rel="stylesheet" href="./assets/css/principal.css">
     <!-- <link rel="stylesheet" href="./assets/css/login.css"> -->
     <!-- <link rel="stylesheet" href="./assets/css/new_product.css"> -->
-    <link rel="stylesheet" href="./assets/css/all_products.css">
+    <!-- <link rel="stylesheet" href="./assets/css/all_products.css"> -->
     <link rel="stylesheet" href="./assets/css/footer.css">
 
     <link rel="stylesheet" href="./assets/css/responsivo.css">
+    <link rel="stylesheet" href="./assets/css/editproduct-responsivo.css">
+
 
 
     <!-- fontawesome icons -->
@@ -28,7 +32,7 @@
 
 
     <!-- Scripts -->
-    <script type="module" src="./assets/js/productos.js"></script>
+    <script type="module" src="./assets/js/editproduct.js"></script>
 
 
     <title>Proyecto Ecommerce</title>
@@ -58,7 +62,7 @@
     </nav>
 
 
-    <main id="maincontent">
+    <main id="maincontent" data-main>
 
       <div id="message" class="" >
         <div id="message__contenido" class="" data-msg>
@@ -67,15 +71,60 @@
         </div>
       </div>
 
+      <div id="editproduct" class="" data-main-contenido>
 
-      <div id="all" class="">
-
-        <div id="all__head" class="">
-          <span>Todos los productos</span>
-          <a id="addBtn" href="new_product.html">Agregar producto</a>
+        <div id="editproduct__title" class="">
+          <h1>Editar producto</h1>
         </div>
 
-        <div id="all__body" class="">
+        <form id="editproduct__form" class="" data-form-new>
+
+          <fieldset class="fieldsetForm">
+            <span>URL de la imagen</span>
+            <input type="url" name="" value="" data-form-url  >
+          </fieldset>
+
+          <fieldset class="fieldsetForm">
+            <span>Categoría</span>
+            <div id="categoria" class="">
+              <div id="categoria__existente" class="">
+                <!-- <span>Existente</span> -->
+                <select class="" name="" data-form-category-select>
+                  <option value="0" selected>Seleccione</option>
+                </select>
+              </div>
+
+              <!-- <div id="categoria__nueva" class="">
+                <span>Nueva</span>
+                <input type="text" name="" value="" minlength="4" maxlength="20" data-form-categoria >
+              </div> -->
+
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldsetForm">
+            <span>Nombre del producto</span>
+            <input type="text" name="" value="" data-form-nombre  >
+          </fieldset>
+
+          <fieldset class="fieldsetForm">
+            <span>Precio del producto</span>
+            <div id="priceField" class="">
+              <span id="priceField__span">$</span>
+              <input id="priceField__price" type="number" min="1" name="" value="" step="0.1"  data-form-precio  >
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldsetForm">
+            <span>Descripción del producto</span>
+            <textarea name="name" rows="" cols="" maxlength="50" data-form-descripcion ></textarea>
+          </fieldset>
+
+          <button type="submit" name="button">Guardar</button>
+
+        </form>
+        <div class="div-span-form" >
+          <span data-create-cancel>Cancelar</span>
         </div>
 
       </div>
@@ -104,7 +153,7 @@
 
           <div id="footer__datos-contacto" class="">
             <span>Hable con nosotros</span>
-            <form id="form_contacto" class="" action="index.html" method="post">
+            <form id="form_contacto" class="" data-form-contacto>
               <fieldset id="form_contacto-fs1" class="campos">
                 <input type="text" name="" value="" >
                 <span>Nombre</span>
@@ -125,7 +174,7 @@
 
       <div id="footer__creditos" class="">
         <span>
-          Desarrollado por <span id="me">Tomás Valdivia</span> - <a href="https://github.com/kurotom">kurotom</a>
+          Desarrollado por <span id="me"><a href="https://github.com/kurotom">Tomás Valdivia - kurotom</a></span>
         </span>
         <span>2022</span>
       </div>

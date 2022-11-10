@@ -1,0 +1,103 @@
+@import "./index.css";
+
+#navbar #navbar__search {
+  display: none;
+}
+
+
+#data {
+  min-height: 80vh;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+#data__head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#data__head h1 {
+  color: var(--color-precio);
+  font-weight: bold;
+  font-size: 30px;
+}
+#data__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#form__change{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 30rem;
+}
+#form__change fieldset {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-bottom: 1rem;
+}
+#form__change fieldset span {
+  font-size: 20px;
+  color: gray;
+  padding-left: 1rem;
+}
+.input__edit {
+  height: 2rem;
+  font-size: 17px;
+  border-radius: 1rem;
+  border: 1px solid gray;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: auto;
+}
+
+.div-span-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div-span-form span:hover {
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px gray;
+  border-radius: 1rem;
+  background-color: navy;
+  color: white;
+  text-shadow: 0px 1px 5px black;
+  font-weight: bold;
+}
+.div-span-form span {
+  font-size: 15px;
+  font-weight: normal;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+
+.button__submit {
+  color: white;
+  text-decoration: none;
+  background-color: var(--color-boton);
+  height: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  width: 95%;
+}
+.button__submit:hover {
+  cursor: pointer;
+  font-size: 17px;
+}

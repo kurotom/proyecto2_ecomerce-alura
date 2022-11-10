@@ -9,12 +9,17 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/principal.css">
-    <!-- <link rel="stylesheet" href="./assets/css/login.css"> -->
-    <!-- <link rel="stylesheet" href="./assets/css/new_product.css"> -->
-    <link rel="stylesheet" href="./assets/css/all_products.css">
+
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/css/panel.css">
+
+    <link rel="stylesheet" href="./assets/css/new_product.css">
+    <!-- <link rel="stylesheet" href="./assets/css/all_products.css"> -->
     <link rel="stylesheet" href="./assets/css/footer.css">
 
     <link rel="stylesheet" href="./assets/css/responsivo.css">
+    <link rel="stylesheet" href="./assets/css/panel-responsivo.css">
+    
 
 
     <!-- fontawesome icons -->
@@ -26,9 +31,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
 
-
     <!-- Scripts -->
-    <script type="module" src="./assets/js/productos.js"></script>
+    <script type="module" src="./assets/js/panel.js" ></script>
 
 
     <title>Proyecto Ecommerce</title>
@@ -51,11 +55,12 @@
             </fieldset>
           </form>
         </li>
-        <li>
+        <!-- <li>
           <a id="loginBtn" href="login.html">Login</a>
-        </li>
+        </li> -->
       </ul>
     </nav>
+
 
 
     <main id="maincontent">
@@ -67,21 +72,82 @@
         </div>
       </div>
 
-
-      <div id="all" class="">
-
-        <div id="all__head" class="">
-          <span>Todos los productos</span>
-          <a id="addBtn" href="new_product.html">Agregar producto</a>
+      <div id="panel" class="" data-panel>
+        <div id="panel__control" class="">
+          <h1 id="panel__h1-name" data-panel-h1></h1>
+          <span id="panel__quitBtn" data-panel-quit>Salir</span>
         </div>
+        <div id="panel__datos" class="">
+          <div class="panel__datos-div">
+            <span>Nombre</span>
+            <span id="panel__nombre" data-panel-nombre></span>
+            <span>
+              <i id="edit" class="fa-solid fa-pen-to-square icons" title="Editar" ></i>
+            </span>
+          </div>
+          <div class="panel__datos-div">
+            <span>Email</span>
+            <span id="panel__email" data-panel-email></span>
+            <span>
+              <i id="edit" class="fa-solid fa-pen-to-square icons" title="Editar" ></i>
+            </span>
+          </div>
+          <div class="panel__datos-div">
+            <span id="panel__change-pass" data-panel-change-pass>Cambiar contraseña</span>
+          </div>
 
-        <div id="all__body" class="">
+          <div class="panel__datos-div">
+            <span id="panel__delete-account" data-panel-delete-account >Borrar cuenta</span>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div id="change" class="" data-change>
+        <h1 id="change__h1">Cambio de contraseña</h1>
+        <form id="change__form" class="" data-form-change-pass>
+          <!-- <fieldset>
+            <input class="change__form-input" type="password" min="1" name="" value="" placeholder="Contraseña antigua" required data-form-change-old >
+          </fieldset> -->
+          <fieldset>
+            <input class="change__form-input" type="password" min="1" name="" value="" placeholder="Nueva contraseña" required data-form-change-new1 >
+          </fieldset>
+          <fieldset>
+            <input class="change__form-input" type="password" min="1" name="" value="" placeholder="Repita nueva contraseña" required data-form-change-new2 >
+          </fieldset>
+          <div class="div-span-form">
+            <button class="button__submit" type="submit" name="button" data-form-btnSubmit>Crear</button>
+          </div>
+        </form>
+
+        <div class="div-span-form" >
+          <span data-create-cancel>Cancelar</span>
         </div>
 
       </div>
 
 
+      <div id="deleteAccount" class="" data-delete-account>
+
+        <div id="deleteAccount__advertencia" class="">
+          <span>¿Está seguro?</span>
+          <span>
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            Esta operación no se puede deshacer
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </span>
+        </div>
+        <div id="deleteAccount__options" class="">
+          <span class="btn-options" data-confirm-delete>Si</span>
+          <span class="btn-options" data-cancel-delete>No</span>
+        </div>
+
+      </div>
+
     </main>
+
+
 
 
     <footer id="footer">
@@ -132,7 +198,6 @@
 
 
     </footer>
-
 
   </body>
 </html>

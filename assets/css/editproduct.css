@@ -1,0 +1,220 @@
+@import "./index.css";
+
+#editproduct {
+  min-height: 110vh;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 2rem;
+  padding-bottom: 7rem;
+}
+
+
+#message {
+  text-align: center;
+  height: 3rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#message__contenido {
+  color: var(--color-precio);
+  width: 50%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--color-fondo);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+}
+#message__contenido:hover {
+  box-shadow: 0px 3px 8px gray;
+}
+#message__span {
+  font-weight: normal;
+}
+#message__close {
+  color: var(--color-precio);
+}
+#message__close:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+/* END MESSAGE */
+
+
+/*  */
+#editproduct__title {
+
+  padding-left: 2rem;
+  width: 30rem;
+}
+#editproduct__title h1 {
+  color: var(--color-precio);
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+#editproduct__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin-top: 1rem;
+  width: 30rem;
+}
+
+#editproduct__form .fieldsetForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.fieldsetForm span {
+  font-size: 18px;
+  color: gray;
+  padding-left: 1rem;
+}
+.fieldsetForm input, .fieldsetForm textarea {
+  border: none;
+  height: 2rem;
+  padding-left: 1rem;
+  font-size: 20px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-bottom: 1px solid gray;
+  font-family: var(--font-family);
+}
+.fieldsetForm textarea {
+  height: 6rem;
+  resize: vertical;
+  font-family: var(--font-family);
+  font-size: 20px;
+}
+.fieldsetForm input:focus-visible, .fieldsetForm textarea:focus-visible {
+  outline: none;
+  /* outline-style: dashed;
+  outline-color: var(--color-boton);
+  outline-width: 3px; */
+}
+
+#categoria {
+  display: grid;
+  grid-template-areas: "existente nueva";
+  /* grid-template-columns: 10rem auto; */
+  grid-template-columns: 12rem;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: flex-start;
+  column-gap: 1rem;
+}
+
+#categoria__existente {
+  grid-area: existente;
+}
+#categoria__existente select {
+  font-family: var(--font-family));
+  font-size: 18px;
+  width: 100%;
+  position: relative;
+  top: 0.33rem;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 3px 10px 3px 10px;
+}
+#categoria__existente span {
+  padding: 0;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+#categoria__nueva {
+  grid-area: nueva;
+}
+#categoria__nueva input {
+  width: 95%;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+}
+
+
+#priceField {
+  display: grid;
+  grid-template-areas:
+    "signo valor";
+  align-items: center;
+  grid-template-columns: 2.5rem auto;
+  border-bottom: 1px solid gray;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+#priceField__span {
+  grid-area: signo;
+  font-weight: normal;
+  font-size: 24px;
+}
+#priceField__price {
+  grid-area: valor;
+  margin-left: 0;
+  padding-left: 0;
+  border: none;
+}
+
+
+#editproduct__form button {
+  color: white;
+  text-decoration: none;
+  background-color: var(--color-boton);
+  height: 3rem;
+  border-radius: 4px;
+  border: none;
+  width: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: 0px 1px 5px navy;
+}
+
+#editproduct__form button:hover {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+
+}
+
+.div-span-form {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-span-form span {
+  font-size: 15px;
+  font-weight: normal;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+}
+.div-span-form span:hover {
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px gray;
+  border-radius: 1rem;
+  background-color: navy;
+  color: white;
+  text-shadow: 0px 1px 5px black;
+  font-weight: bold;
+}

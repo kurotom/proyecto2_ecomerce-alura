@@ -1,4 +1,6 @@
 import { fetchData } from './handlers/fetch_get.js';
+import { postData } from './handlers/fetch_post.js';
+
 import { barraSearch } from './componentes/searchComponent.js';
 
 
@@ -18,12 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let btnCreateAccount = document.querySelector("[data-create-span]");
   //
 
-  //  panel control usuario
-  let panelUser = document.querySelector("[data-panel]");
-  let panelUsername = document.querySelector("[data-panel-name]");
-  let panelEmail = document.querySelector("[data-panel-email]");
-  let panelQuit = document.querySelector("[data-panel-quit]");
-  //
 
   // formulario crear cuenta
   let conenedorCreate = document.querySelector("[data-contenedor-create]");
@@ -42,27 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //
   barraSearch();
   //
-
-  //
-  // HANDLE ACCOUNT SHOW OR SHOW LOGIN/REGISTER
-  let userData = JSON.parse(window.localStorage.getItem("user"));
-  if (userData !== null && Object.keys(userData).length > 0) {
-    conenedorCreate.style.display = "none";
-    loginDiv.style.display = "none";
-    panelUser.style.display = "flex";
-
-    panelUsername.innerText = userData.name.slice(0, 1).toUpperCase() + userData.name.slice(1,);
-    panelEmail.innerText = userData.email;
-
-
-    panelQuit.addEventListener('click', () => {
-      window.localStorage.setItem("user", JSON.stringify({}));
-
-      conenedorCreate.style.display = "none";
-      loginDiv.style.display = "flex";
-      panelUser.style.display = "none";
-    })
-  };
 
 
 //
@@ -86,6 +61,37 @@ document.addEventListener('DOMContentLoaded', () => {
 //  Formulario CREATE ACCOUNT
   formularioCreate.addEventListener("submit", (evento) => {
     evento.preventDefault();
+
+    let divMensajes = document.querySelector("[data-msg-span]");
+
+    if (pass1NewUser.value === pass2NewUser.value) {
+      let objeto = {
+        "id": uuid.v4(),
+        "name": nameNewUser.value,
+        "pass": pass1NewUser.value,
+        "email": emailNewUser.value,
+        "isadmin": false
+      }
+      postData('http://localhost:8000/users', objeto).then(
+        (response) => {
+          console.log(response)
+        },
+        (error) => {
+        }
+      )
+
+      nameNewUser.value = "";
+      emailNewUser.value = "";
+      pass1NewUser.value = "";
+      pass2NewUser.value = "";
+
+      window.location.href = "/";
+    } else {
+      divMensajes.innerHTML += `<span>Las contraseñas deben coincidir</span>`
+
+      pass1NewUser.value = "";
+      pass2NewUser.value = "";
+    }
 
   });
 
@@ -118,12 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
           } else {
 
             if (usuario[0].pass === password.value) {
-              console.log("logueado");
 
               email.value = "";
               password.value = "";
 
               const dataUser = {
+                "id": usuario[0].id,
                 "name": usuario[0].name,
                 "isadmin": usuario[0].isadmin,
                 "email": usuario[0].email

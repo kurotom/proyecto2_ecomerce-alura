@@ -1,0 +1,220 @@
+@import "./index.css";
+
+/* seccion panel control usuario */
+#panel {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  row-gap: 1rem;
+  margin-bottom: 5rem;
+}
+#panel__control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 1rem;
+}
+#panel__datos {
+  display: inline-grid;
+  row-gap: 1rem;
+}
+.panel__datos-div {
+  display: grid;
+  grid-template-areas: "item data edit";
+  grid-template-columns: 12rem auto 2rem;
+  grid-template-rows: 2.5rem;
+}
+.panel__datos-div span:nth-child(1) {
+  grid-area: item;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.panel__datos-div span:nth-child(2) {
+  grid-area: data;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.panel__datos-div span:nth-child(3) {
+  grid-area: edit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.icons {
+  font-size: 1.5em;
+  color: white !important;
+  font-weight: bold !important;
+  text-shadow: 0px 2px 5px black;
+}
+.icons:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#panel__h1-name {
+  color: var(--color-precio);
+  font-size: 30px;
+  font-weight: bold;
+}
+#panel__email {
+
+}
+
+#panel__quitBtn {
+  color: white;
+  text-decoration: none;
+  background-color: var(--color-boton);
+  height: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  width: 5rem;
+}
+
+#panel__quitBtn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#panel__change-pass:hover, #panel__change-pass:active {
+  cursor: pointer;
+  font-weight: bold;
+}
+#panel__delete-account:hover, #panel__delete-account:active {
+  cursor: pointer;
+  font-weight: bold;
+  color: crimson;
+}
+
+
+
+
+/* change pass CSS */
+
+#change {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  margin-bottom: 5rem;
+  row-gap: 2rem;
+}
+#change__h1 {
+  color: var(--color-precio);
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  width: auto;
+}
+#change__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+}
+
+.change__form-input {
+  height: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 16rem;
+  font-size: 17px;
+  border-radius: 1rem;
+  border: 1px solid gray;
+}
+
+.button__submit {
+  width: 16rem;
+}
+
+
+/* Delete account CSS */
+
+#deleteAccount {
+  display: none;
+  flex-direction: column;
+  row-gap: 3rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
+
+  background-color: var(--color-fondo);
+  height: 60vh;
+  border-radius: 3rem;
+
+}
+
+#deleteAccount__advertencia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+#deleteAccount__advertencia span:nth-child(1) {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--color-boton);
+}
+#deleteAccount__advertencia span:nth-child(2) {
+  font-size: 20px;
+  color: var(--color-precio);
+  font-weight: bold;
+}
+#deleteAccount__advertencia span:nth-child(2) i {
+  color: #ff0f0f;
+}
+
+#deleteAccount__options {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10rem;
+}
+
+#deleteAccount__options .btn-options {
+  border: 1px solid darkgray;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: var(--color-precio);
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+  text-shadow: 0px 1px 7px black;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#deleteAccount__options .btn-options:nth-child(1) {
+  background-color: #FF4C4C;
+}
+#deleteAccount__options .btn-options:nth-child(2) {
+  background-color: lightgreen;
+
+}
+
+#deleteAccount__options .btn-options:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

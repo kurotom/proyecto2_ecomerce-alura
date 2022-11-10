@@ -14,8 +14,13 @@
     margin-top: 2rem;
   }
   .producto:nth-child(+n) {
-    display: flex;
-    width: 47%;
+    display: flex !important;
+    width: 47% !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1rem;
+    font-weight: bold;
   }
 
   #maincontent {
@@ -25,6 +30,7 @@
   #footer {
     margin-top: 4rem;
   }
+
 
 }
 
@@ -43,8 +49,13 @@
   }
 
   .producto:nth-child(+n) {
-    display: flex;
-    width: 23%;
+    display: flex !important;
+    width: 23% !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1rem;
+    font-weight: bold;
   }
 
   #maincontent {

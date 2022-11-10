@@ -118,9 +118,9 @@
 .div-span-form span:hover {
   cursor: pointer;
   font-size: 18px;
-  box-shadow: 0px 1px 5px lightgray;
+  box-shadow: 0px 1px 5px gray;
   border-radius: 1rem;
-  background-color: #eee;
+  background-color: navy;
   color: white;
   text-shadow: 0px 1px 5px black;
   font-weight: bold;
@@ -129,70 +129,4 @@
 /* seccion crear cuenta  */
 #create {
   display: none;
-}
-
-
-/* seccion panel control usuario */
-#panel {
-  display: none;
-  flex-direction: column;
-  height: 60vh;
-  margin-left: 7rem;
-  margin-right: 7rem;
-  row-gap: 1rem;
-  margin-bottom: 5rem;
-}
-#panel__control {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-bottom: 1rem;
-}
-#panel__datos {
-
-}
-.panel__datos-div {
-  display: grid;
-  grid-template-areas: "item data";
-  grid-template-columns: 10rem;
-}
-.panel__datos-div span:nth-child(1) {
-  grid-area: item;
-}
-.panel__datos-div span:nth-child(2) {
-  grid-area: data;
-}
-
-
-#panel__name {
-  color: var(--color-precio);
-  font-size: 30px;
-  font-weight: bold;
-}
-#panel__email {
-
-}
-
-#panel__quitBtn {
-  color: white;
-  text-decoration: none;
-  background-color: var(--color-boton);
-  height: 2.5rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  border-radius: 4px;
-  border: none;
-  width: 5rem;
-}
-
-#panel__quitBtn:hover {
-  cursor: pointer;
-  transform: scale(1.1);
 }

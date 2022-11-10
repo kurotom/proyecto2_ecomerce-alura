@@ -222,6 +222,9 @@
 }
 
 .producto {
+  display: none;
+}
+.producto:nth-child(-n+6) {
   display: flex;
   flex-direction: column;
   justify-content: center;

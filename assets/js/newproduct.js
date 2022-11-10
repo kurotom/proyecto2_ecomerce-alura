@@ -5,7 +5,7 @@ import { selectHandler } from './componentes/formularioNewProduct.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  
+
   loginBoton();
 
   selectHandler();
@@ -30,10 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  setTimeout(() => {
+    window.sessionStorage.removeItem("msg");
+    mensajeBanner.innerHTML = "";
+    mensajeContent.style.display = "none";
+  }, 3000);
 
 
-
-
-  let userData = JSON.parse(window.sessionStorage.getItem("user"));
+  // let userData = JSON.parse(window.sessionStorage.getItem("user"));
 
 });

@@ -2,10 +2,6 @@ import { fetchData } from '../handlers/fetch_get.js';
 import { postData } from '../handlers/fetch_post.js';
 
 
-'http://localhost:8000/productos';
-'http://localhost:8000/category';
-
-
 export const handleForm = () => {
 
   const formulario = document.querySelector("[data-form-new]");
@@ -21,6 +17,7 @@ export const handleForm = () => {
   let categoriaDeclarada = "";
 
   let mensajes = [];
+
   let msg = JSON.parse(window.sessionStorage.getItem("msg"));
 
 
@@ -28,10 +25,7 @@ export const handleForm = () => {
     evento.preventDefault();
 
     if (inputCatProducto.value !== "") {
-      categoriaDeclarada = inputCatProducto.value;
-
-
-      postData('http://localhost:8000/category', {"name": categoriaDeclarada}).then(
+      postData('http://localhost:8000/category', {"name": inputCatProducto.value}).then(
         (response) => {
           // console.log(response)
           console.log("Done")
@@ -47,9 +41,9 @@ export const handleForm = () => {
 
         },
         (error) => {
-          console.log(error)
         }
       );
+      categoriaDeclarada = parseInt(select.getAttribute("last")) + 1;
 
 
     } else if (select.value !== "") {
@@ -76,23 +70,22 @@ export const handleForm = () => {
         precioProducto.value = "";
         urlImage.value = "";
         descripcionProducto.value = "";
-        select.value = 0;
         categoriaDeclarada = "";
+        select.value = 0;
 
         window.scrollTo(0, 0);
-
 
 
         if (msg !== null) {
           mensajes.push(`<span>Producto creado</span>`);
           window.sessionStorage.removeItem("msg");
           window.sessionStorage.setItem("msg", JSON.stringify(mensajes));
+
         } else {
           mensajes.push(`<span>Producto creado</span>`);
           window.sessionStorage.setItem("msg", JSON.stringify(mensajes));
+
         }
-
-
 
       },
       (error) => {
@@ -101,7 +94,7 @@ export const handleForm = () => {
     );
 
   });
-
+  mensajes = [];
 };
 
 
@@ -112,7 +105,9 @@ export const selectHandler = () => {
       response.map(item => {
         let template = `<option id="${item.name}" value="${item.id}">${item.name}</option>`;
         select.innerHTML += template;
-      })
+      });
+
+      select.setAttribute("last", response.length);
 
       let catProducto = document.querySelector("[data-form-categoria]");
       select.addEventListener("change", (evento) => {
@@ -128,6 +123,24 @@ export const selectHandler = () => {
 
         }
       })
+    },
+    (error) => {
+    }
+  );
+
+};
+
+
+
+export const selectEditCategoria = () => {
+  let select = document.querySelector("[data-form-category-select]");
+  fetchData('http://localhost:8000/category').then(
+    (response) => {
+      response.map(item => {
+        let template = `<option id="${item.name}" value="${item.id}">${item.name}</option>`;
+        select.innerHTML += template;
+      });
+
     },
     (error) => {
     }

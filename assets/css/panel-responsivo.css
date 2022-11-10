@@ -1,0 +1,26 @@
+@import "./index.css";
+
+@media screen and (max-width: 500px) {
+  #panel {
+    margin-left: 2rem;
+    margin-right: 2rem
+  }
+  .panel__datos-div {
+    grid-template-columns: 5rem auto 2rem;
+  }
+
+  #deleteAccount {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+  }
+
+  #deleteAccount__options {
+    column-gap: 5rem;
+  }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+}

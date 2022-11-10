@@ -1,0 +1,22 @@
+@import "./index.css";
+
+
+@media screen and (max-width: 500px) {
+
+  #editproduct__title {
+    padding-left: 0;
+    width: auto;
+  }
+
+  #editproduct__form {
+    width: auto;
+  }
+
+
+}
+
+
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+}

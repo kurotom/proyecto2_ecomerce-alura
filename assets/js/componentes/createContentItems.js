@@ -1,7 +1,19 @@
 import { fetchData } from '../handlers/fetch_get.js';
+import { deleteData } from '../handlers/fetch_delete.js';
 
 
 export const handleProductos = (parentDiv, productosIterable=[]) => {
+
+  // BOTON CERRAR ALERTAS
+  let closeBanner = document.querySelector("[data-msg-close]");
+  closeBanner.addEventListener("click", () => {
+    // mensajeBanner.innerHTML = "";
+    document.querySelector("[data-msg]").style.display = "none";
+  });
+  //
+  //
+
+
 
   let contenedorProductos = parentDiv;
 
@@ -58,18 +70,24 @@ export const handleProductos = (parentDiv, productosIterable=[]) => {
         editarBtn.forEach(item => {
           item.addEventListener('click', () => {
             const itemID = item.parentNode.getAttribute("value");
-            console.log(itemID);
-
-
+            window.location.href = `editproduct.html?id=${itemID}`;
           })
         });
         borrarBtn.forEach(item => {
           item.addEventListener("click", () => {
             const itemID = item.parentNode.getAttribute("value");
-            console.log(itemID);
+            deleteData(`http://localhost:8000/productos/${itemID}`, {"id": itemID}).then(
+              (response) => {
+
+                let content = document.querySelector("[data-msg-span]");
+                content.innerHTML += `<span>Elemento borrado</span>`;
+                document.querySelector("[data-msg]").style.display = "flex";
 
 
-            handleProductos();
+              },
+              (error) => {
+              }
+            )
           })
         });
 
@@ -78,25 +96,5 @@ export const handleProductos = (parentDiv, productosIterable=[]) => {
         console.log(error)
       }
     )
-  } else if (productosIterable.length > 0) {
-    productosIterable.forEach(item => {
-      let template =  `
-        <div class="producto">
-          <div class="producto__options" value="${item.id}">
-            <i id="edit" class="fa-solid fa-pen-to-square icons" title="Editar" ></i>
-            <i id="delete" class="fa-regular fa-trash-can icons" title="Borrar" ></i>
-          </div>
-          <div class="producto__informacion">
-            <img src="${item.img}" alt="productos">
-            <span>${item.name}</span>
-            <span>$ ${item.price}</span>
-            <a href="descripcion.html?item=${item.id}" title="Ir al producto">Ver producto</a>
-          </div>
-        </div>`;
-
-      contenedorProductos.innerHTML += template;
-
-    })
-
   }
 };

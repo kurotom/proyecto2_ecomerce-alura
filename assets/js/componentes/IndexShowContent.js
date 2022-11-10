@@ -25,8 +25,7 @@ export const showIndex = () => {
           </a>
         </div>`;
 
-        let fila_productos = `<div id="fila${item.id}__productos" class="fila__productos" value=${item.id}>
-        </div>`
+        let fila_productos = `<div id="fila${item.id}__productos" class="fila__productos" value=${item.id}></div>`
 
         fila.innerHTML += head_producto;
         fila.innerHTML += fila_productos;
