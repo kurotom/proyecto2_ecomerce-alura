@@ -22,6 +22,8 @@
   height: 80%;
   padding-left: 7rem;
   padding-right: 7rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 #footer__datos-info {
@@ -60,7 +62,7 @@
   flex-direction: column;
 }
 
-#footer__datos-contacto span:nth-child(1) {
+#footer__datos-contacto h1 {
   color: var(--color-precio);
   font-weight: bold;
 }
@@ -70,19 +72,29 @@
   flex-direction: column;
 }
 
+.form_contacto-alert {
+  font-family: var(--font-family);
+  color: red;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  height: 1rem;
+}
+
 #form_contacto .campos {
   display: flex;
   flex-direction: column;
 }
 
 #form_contacto-fs1 input {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  font-family: var(--font-family);
+  font-size: 18px;
 }
 #form_contacto-fs1 span {
   position: relative;
-  bottom: 2.8em;
+  bottom: 3.6em;
   font-size: 12px;
   left: 1.5em;
 }
@@ -94,11 +106,13 @@
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 5px;
+  font-family: var(--font-family);
+  font-size: 18px;
 }
 
 #form_contacto-fs2 span {
   position: relative;
-  bottom: 4em;
+  bottom: 4.5em;
   font-size: 12px;
   left: 1.5em;
 }
@@ -136,6 +150,8 @@
   justify-content: center;
   align-items: center;
   height: 20%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 #footer__creditos #me {
@@ -148,4 +164,15 @@
 }
 #footer__creditos a:hover {
   text-shadow: 0px 1px 1px orangered;
+}
+
+
+
+/*  */
+
+.invalido {
+  outline: 2px solid red;
+}
+.valido:focus {
+  outline: 2px solid var(--color-boton);
 }

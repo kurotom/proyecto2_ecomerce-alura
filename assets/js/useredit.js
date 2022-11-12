@@ -1,6 +1,4 @@
-// import { fetchData } from './handlers/fetch_get.js';
-// import { putData } from './handlers/fetch_put.js';
-
+import { categoryURL, productosURL, usersURL} from './urlsDB.js';
 import { patchData } from './handlers/fetch_patch.js';
 
 
@@ -48,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.localStorage.setItem("user", JSON.stringify(userData));
 
 
-      patchData(`http://localhost:8000/users/${userData.id}`, userData).then(
+      patchData(usersURL + `/${userData.id}`, userData).then(
         (response) => {
           window.location.href = "panel.html";
         },
@@ -66,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "panel.html";
   });
   deleteAccount.addEventListener("click", () => {
-    
+
   });
 
 });

@@ -1,3 +1,5 @@
+import { categoryURL, productosURL, usersURL} from './urlsDB.js';
+
 import { loginBoton } from './componentes/botonLogin.js';
 import { selectEditCategoria } from './componentes/formularioNewProduct.js';
 
@@ -21,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let url = new URL(window.location.href);
   let idProducto = url.search.split('?id=')[1];
 
-  fetchData('http://localhost:8000/productos').then(
+  fetchData(productosURL).then(
     (response) => {
       let itemArray = response.filter(item => {
         return item.id === idProducto;
@@ -106,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           }
 
-          putData(`http://localhost:8000/productos/${item.id}`, objetoNuevo).then(
+          putData(productosURL + `${item.id}`, objetoNuevo).then(
             (response) => {
 
               window.history.back();

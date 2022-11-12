@@ -1,3 +1,4 @@
+import { categoryURL, productosURL, usersURL} from '../urlsDB.js';
 import { fetchData } from '../handlers/fetch_get.js';
 import { deleteData } from '../handlers/fetch_delete.js';
 import { handleProductos } from './createContentItems.js';
@@ -9,7 +10,7 @@ export const itemsPromos = (url, contenedor) => {
 
   let categoria = direccion.search.split("?cat=")[1]
 
-  fetchData('http://localhost:8000/productos').then(
+  fetchData(productosURL).then(
     (response) => {
 
       let productos = response.filter(item => {
@@ -18,7 +19,7 @@ export const itemsPromos = (url, contenedor) => {
 
 
       let title = document.querySelector("[data-title-category]");
-      fetchData('http://localhost:8000/category').then(
+      fetchData(categoryURL).then(
         (response) => {
           let item = response.filter(i => {
             return i.id === parseInt(categoria)
@@ -91,7 +92,7 @@ export const itemsPromos = (url, contenedor) => {
         borrarBtn.forEach(item => {
           item.addEventListener("click", () => {
             const itemID = item.parentNode.getAttribute("value");
-            deleteData(`http://localhost:8000/productos/${itemID}`, {"id": itemID}).then(
+            deleteData(productosURL + `${itemID}`, {"id": itemID}).then(
               (response) => {
 
                 let content = document.querySelector("[data-msg-span]");

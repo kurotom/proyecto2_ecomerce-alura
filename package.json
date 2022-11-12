@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"json-server --port=8000 --watch db.json\" \"live-server --port=8080 --open=index.html\""
+    "start": "concurrently \"json-server --port=8000 --watch db.json\" \"live-server --port=8080 --wait=100000 --open=index.html\""
   },
   "repository": {
     "type": "git",

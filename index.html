@@ -40,7 +40,7 @@
     <nav id="navbar">
       <ul>
         <li id="">
-          <a href="/">
+          <a href="index.html">
             <img src="./assets/img/Logo.png" alt="logo">
           </a>
         </li>
@@ -96,14 +96,16 @@
           </ul>
 
           <div id="footer__datos-contacto" class="">
-            <span>Hable con nosotros</span>
+            <h1>Hable con nosotros</h1>
             <form id="form_contacto" class="" data-form-contacto>
+              <span class="form_contacto-alert" data-warning-name></span>
               <fieldset id="form_contacto-fs1" class="campos">
-                <input type="text" name="" value="" >
+                <input type="text" name="" value="" minlength="1" maxlength="40" data-form-contacto-name>
                 <span>Nombre</span>
               </fieldset>
+              <span class="form_contacto-alert" data-warning-mensaje></span>
               <fieldset id="form_contacto-fs2" class="campos">
-                <input type="text" name="" value="" >
+                <input type="text" name="" value="" minlength="1" maxlength="120" data-form-contacto-mensaje>
                 <span>Escribe tu mensaje</span>
               </fieldset>
               <button type="submit" name="button">Enviar mensaje</button>

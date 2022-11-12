@@ -1,3 +1,4 @@
+import { categoryURL, productosURL, usersURL} from '../urlsDB.js';
 import { fetchData } from '../handlers/fetch_get.js';
 
 export const showDescripcion = (idItem) => {
@@ -6,7 +7,7 @@ export const showDescripcion = (idItem) => {
   let descripcionProducto = document.querySelector("[data-descripcion-producto]");
   let contenedorProductosSimilares = document.querySelector("[data-content-similares]");
 
-  fetchData('http://localhost:8000/productos').then(
+  fetchData(productosURL).then(
     (response) => {
 
       let itemConsultado = response.filter(item => {

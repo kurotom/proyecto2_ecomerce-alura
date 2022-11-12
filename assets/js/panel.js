@@ -1,3 +1,4 @@
+import { categoryURL, productosURL, usersURL} from './urlsDB.js';
 import { barraSearch } from './componentes/searchComponent.js';
 
 import { fetchData } from './handlers/fetch_get.js';
@@ -55,10 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmDeleteAccount = document.querySelector("[data-confirm-delete]");
   const cancelDeleteAccount = document.querySelector("[data-cancel-delete]");
   confirmDeleteAccount.addEventListener("click", () => {
-    deleteData(`http://localhost:8000/users/${userData.id}`, {"id": userData.id}).then(
+    deleteData(usersURL + `${userData.id}`, {"id": userData.id}).then(
       (response) => {
         window.localStorage.removeItem("user");
-        window.location.href = "/";
+        window.location.href = "index.html";
       },
       (error) => {
       }
@@ -121,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let userData = JSON.parse(window.localStorage.getItem("user"));
       userData.pass = newPass1.value;
 
-      putData(`http://localhost:8000/users/${userData.id}`, userData).then(
+      putData(usersURL + `${userData.id}`, userData).then(
         (response) => {
           panelUser.style.display = "flex";
           changePanel.style.display = "none";

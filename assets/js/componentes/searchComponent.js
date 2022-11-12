@@ -1,6 +1,6 @@
 import { fetchData } from '../handlers/fetch_get.js';
 import { deleteData } from '../handlers/fetch_delete.js';
-
+import { categoryURL, productosURL, usersURL} from '../urlsDB.js';
 
 export const barraSearch = () => {
 
@@ -26,7 +26,7 @@ export const barraSearch = () => {
 
 export const showSearchItems = (query) => {
 
-  fetchData("http://localhost:8000/productos").then(
+  fetchData(productosURL).then(
     (response) => {
 
       let divParent = document.querySelector("[data-main-search]");
@@ -102,7 +102,7 @@ export const showSearchItems = (query) => {
         borrarBtn.forEach(item => {
           item.addEventListener("click", () => {
             const itemID = item.parentNode.getAttribute("value");
-            deleteData(`http://localhost:8000/productos/${itemID}`, {"id": itemID}).then(
+            deleteData(productosURL + `/${itemID}`, {"id": itemID}).then(
               (response) => {
 
                 let content = document.querySelector("[data-msg-span]");

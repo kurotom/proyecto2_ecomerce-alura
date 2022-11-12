@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handleForm();
 
+
+
+
   let mensajeContent = document.querySelector("[data-mensaje-div]");
   let mensajeBanner = document.querySelector("[data-mensaje-span]");
 

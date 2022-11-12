@@ -1,3 +1,4 @@
+import { categoryURL, productosURL, usersURL} from '../urlsDB.js';
 import { fetchData } from '../handlers/fetch_get.js';
 import { deleteData } from '../handlers/fetch_delete.js';
 
@@ -18,7 +19,7 @@ export const handleProductos = (parentDiv, productosIterable=[]) => {
   let contenedorProductos = parentDiv;
 
   if (productosIterable.length === 0) {
-    fetchData('http://localhost:8000/productos').then(
+    fetchData(productosURL).then(
       (response) => {
 
         let userData = JSON.parse(window.localStorage.getItem("user"));
@@ -76,7 +77,7 @@ export const handleProductos = (parentDiv, productosIterable=[]) => {
         borrarBtn.forEach(item => {
           item.addEventListener("click", () => {
             const itemID = item.parentNode.getAttribute("value");
-            deleteData(`http://localhost:8000/productos/${itemID}`, {"id": itemID}).then(
+            deleteData(productosURL + `${itemID}`, {"id": itemID}).then(
               (response) => {
 
                 let content = document.querySelector("[data-msg-span]");
