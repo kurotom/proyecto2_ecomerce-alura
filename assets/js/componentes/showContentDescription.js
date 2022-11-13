@@ -30,9 +30,15 @@ export const showDescripcion = (idItem) => {
         return item.id !== itemFiltrado.id
       })
 
-      mostrarNoRepetidos.forEach(item => {
-        contenedorProductosSimilares.innerHTML += mostrarItems(item);
-      })
+      if (mostrarNoRepetidos.length === 0) {
+        contenedorProductosSimilares.innerHTML += `<h1 id="no__similares">Sin produtos similares</h1>`;
+      } else {
+        mostrarNoRepetidos.forEach(item => {
+          contenedorProductosSimilares.innerHTML += mostrarItems(item);
+        })
+
+      }
+
 
 
 
