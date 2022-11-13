@@ -105,10 +105,8 @@
 
 #banner {
 	/* BANNER PARA GITHUB PAGES */
-	background-image:	url("https://kurotom.github.io/alura/ecommerce/assets/img/banner.png");
+	background-image: url('https://kurotom.github.io/alura/ecommerce/assets/img/banner.png');
 
-	/* PARA LOCAL*/
-  /* background-image: url("/assets/img/banner.png"); */
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -238,7 +236,7 @@
   box-shadow: 0px 1px 5px gray;
   border-radius: 2px;
   margin-bottom: 1rem;
-  width: 176px;
+  width: 176px !important;
 }
 
 .producto__info {

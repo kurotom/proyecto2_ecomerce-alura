@@ -1,5 +1,14 @@
 @import "./index.css";
 
+@keyframes hidden {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 #maincontent {
 
@@ -57,14 +66,32 @@
 
 #footer__datos-contacto {
   width: 30rem;
-  row-gap: 1rem;
+  row-gap: 0.5rem;
   display: flex;
   flex-direction: column;
 }
+#footer__datos-informacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+}
 
-#footer__datos-contacto h1 {
+#footer__datos-informacion h1 {
   color: var(--color-precio);
   font-weight: bold;
+}
+#footer__datos-informacion span {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--color-boton);
+  text-shadow: 0px 1px 1px var(--color-precio);
+  /* animation-name: none; */
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
 }
 
 #form_contacto {
@@ -76,7 +103,7 @@
   font-family: var(--font-family);
   color: red;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   height: 1rem;
 }
 

@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
 
     <link rel="stylesheet" href="./assets/css/responsivo.css">
+    <link rel="stylesheet" href="./assets/css/footer-responsivo.css">
+    <link rel="stylesheet" href="./assets/css/useredit-responsivo.css">
 
 
     <!-- fontawesome icons -->
@@ -99,14 +101,19 @@
           </ul>
 
           <div id="footer__datos-contacto" class="">
-            <span>Hable con nosotros</span>
-            <form id="form_contacto" class="" action="index.html" method="post">
+            <div id="footer__datos-informacion" class="">
+              <h1>Hable con nosotros</h1>
+              <span data-showalert-send></span>
+            </div>
+            <form id="form_contacto" class="" data-form-contacto>
+              <span class="form_contacto-alert" data-warning-name></span>
               <fieldset id="form_contacto-fs1" class="campos">
-                <input type="text" name="" value="" >
+                <input type="text" name="" value="" minlength="1" maxlength="40" data-form-contacto-name>
                 <span>Nombre</span>
               </fieldset>
+              <span class="form_contacto-alert" data-warning-mensaje></span>
               <fieldset id="form_contacto-fs2" class="campos">
-                <input type="text" name="" value="" >
+                <input type="text" name="" value="" minlength="1" maxlength="120" data-form-contacto-mensaje>
                 <span>Escribe tu mensaje</span>
               </fieldset>
               <button type="submit" name="button">Enviar mensaje</button>
@@ -121,7 +128,7 @@
 
       <div id="footer__creditos" class="">
         <span>
-          Desarrollado por <span id="me">Tomás Valdivia</span> - <a href="https://github.com/kurotom">kurotom</a>
+          Desarrollado por <span id="me"><a href="https://github.com/kurotom">Tomás Valdivia - kurotom</a></span>
         </span>
         <span>2022</span>
       </div>

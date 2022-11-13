@@ -1,12 +1,14 @@
 @import "./index.css";
 
-/* seccion panel control usuario */
+#maincontent {
+  margin-left: 7rem;
+  margin-right: 7rem;
+}
+
 #panel {
   display: flex;
   flex-direction: column;
   height: 60vh;
-  margin-left: 7rem;
-  margin-right: 7rem;
   row-gap: 1rem;
   margin-bottom: 5rem;
 }
@@ -83,7 +85,7 @@
   width: 5rem;
 }
 
-#panel__quitBtn:hover {
+#panel__quitBtn:hover, #panel__quitBtn:active {
   cursor: pointer;
   transform: scale(1.1);
 }
@@ -109,8 +111,6 @@
   align-items: center;
   justify-content: center;
   height: 60vh;
-  margin-left: 7rem;
-  margin-right: 7rem;
   margin-bottom: 5rem;
   row-gap: 2rem;
 }
@@ -131,17 +131,18 @@
 }
 
 .change__form-input {
+  font-family: var(--font-family);
   height: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 16rem;
+  width: 20rem;
   font-size: 17px;
   border-radius: 1rem;
   border: 1px solid gray;
 }
 
 .button__submit {
-  width: 16rem;
+  width: 20rem;
 }
 
 
@@ -151,8 +152,6 @@
   display: none;
   flex-direction: column;
   row-gap: 3rem;
-  margin-left: 7rem;
-  margin-right: 7rem;
   justify-content: center;
   align-items: center;
   font-family: var(--font-family);

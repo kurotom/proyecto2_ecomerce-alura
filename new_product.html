@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/principal.css">
     <link rel="stylesheet" href="./assets/css/new_product.css">
-    <link rel="stylesheet" href="./assets/css/all_products.css">
+    <!-- <link rel="stylesheet" href="./assets/css/all_products.css"> -->
     <link rel="stylesheet" href="./assets/css/footer.css">
 
     <link rel="stylesheet" href="./assets/css/responsivo.css">
+    <link rel="stylesheet" href="./assets/css/footer-responsivo.css">
     <link rel="stylesheet" href="./assets/css/new_product-responsivo.css">
 
 
@@ -77,13 +78,19 @@
         <form id="newproduct__form" class="" data-form-new>
 
           <fieldset class="fieldsetForm">
-            <span>URL de la imagen</span>
-            <input type="file" name="" value="" accept="image/jpeg, image/png, image/webp" data-form-upload-image>
-            <input type="url" name="" value="" data-form-url >
+            <span class="fieldsetForm__title">Imagen del producto</span>
+            <div id="fieldsetForm__uploadDiv">
+              <input type="file" name="" value="" accept="image/jpeg, image/png, image/webp" data-form-upload-image>
+              <span>
+                <i id="fieldsetForm__iconTrash" class="fa-solid fa-trash" title="Limpiar" data-clean-uploadfile></i>
+              </span>
+            </div>
+
+            <input type="url" name="" value="" placeholder="Url imagen" data-form-url >
           </fieldset>
 
           <fieldset class="fieldsetForm">
-            <span>Categoría</span>
+            <span class="fieldsetForm__title">Categoría</span>
             <div id="categoria" class="">
               <div id="categoria__existente" class="">
                 <span>Existente</span>
@@ -100,12 +107,12 @@
           </fieldset>
 
           <fieldset class="fieldsetForm">
-            <span>Nombre del producto</span>
+            <span class="fieldsetForm__title">Nombre del producto</span>
             <input type="text" maxlength="20" name="" value="" data-form-nombre required>
           </fieldset>
 
           <fieldset class="fieldsetForm">
-            <span>Precio del producto</span>
+            <span class="fieldsetForm__title">Precio del producto</span>
             <div id="priceField" class="">
               <span id="priceField__span">$</span>
               <input id="priceField__price" type="number" min="1" name="" value="0" step="0.1" data-form-precio required>
@@ -113,7 +120,7 @@
           </fieldset>
 
           <fieldset class="fieldsetForm">
-            <span>Descripción del producto</span>
+            <span class="fieldsetForm__title">Descripción del producto</span>
             <input type="text" maxlength="120" name="" value="" data-form-descripcion required>
           </fieldset>
 
@@ -146,14 +153,19 @@
           </ul>
 
           <div id="footer__datos-contacto" class="">
-            <span>Hable con nosotros</span>
-            <form id="form_contacto" class="" action="index.html" method="post">
+            <div id="footer__datos-informacion" class="">
+              <h1>Hable con nosotros</h1>
+              <span data-showalert-send></span>
+            </div>
+            <form id="form_contacto" class="" data-form-contacto>
+              <span class="form_contacto-alert" data-warning-name></span>
               <fieldset id="form_contacto-fs1" class="campos">
-                <input type="text" name="" value="" >
+                <input type="text" name="" value="" minlength="1" maxlength="40" data-form-contacto-name>
                 <span>Nombre</span>
               </fieldset>
+              <span class="form_contacto-alert" data-warning-mensaje></span>
               <fieldset id="form_contacto-fs2" class="campos">
-                <input type="text" name="" value="" >
+                <input type="text" name="" value="" minlength="1" maxlength="120" data-form-contacto-mensaje>
                 <span>Escribe tu mensaje</span>
               </fieldset>
               <button type="submit" name="button">Enviar mensaje</button>
@@ -168,7 +180,7 @@
 
       <div id="footer__creditos" class="">
         <span>
-          Desarrollado por <span id="me">Tomás Valdivia</span> - <a href="https://github.com/kurotom">kurotom</a>
+          Desarrollado por <span id="me"><a href="https://github.com/kurotom">Tomás Valdivia - kurotom</a></span>
         </span>
         <span>2022</span>
       </div>

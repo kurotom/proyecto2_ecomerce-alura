@@ -20,6 +20,33 @@ export const handleForm = () => {
 
   let imageUpload = document.querySelector("[data-form-upload-image]");
 
+  let cleanUpload = document.querySelector("[data-clean-uploadfile]");
+
+
+  imageUpload.addEventListener("click", () => {
+    urlImage.disabled = true;
+    urlImage.style.cssText = `cursor: not-allowed;`;
+    urlImage.value = "";
+  })
+  urlImage.addEventListener("change", () => {
+    if (!imageUpload.disabled) {
+      imageUpload.disabled = true;
+      imageUpload.style.cssText = `cursor: not-allowed;`;
+      imageUpload.value = "";
+    } else {
+      imageUpload.disabled = false;
+      imageUpload.style.cssText = `cursor: pointer;`;
+    }
+  })
+
+  cleanUpload.addEventListener("click", () => {
+    imageUpload.value = "";
+    urlImage.value = "";
+    imageUpload.disabled = false;
+    urlImage.disabled = false;
+    urlImage.style.cssText = `cursor: text;`;
+  })
+
 
 
 
@@ -45,16 +72,11 @@ export const handleForm = () => {
       // postData('http://localhost:8000/category', {"name": inputCatProducto.value}).then(
         (response) => {
           // console.log(response)
-          console.log("Done")
 
-          if (msg !== null) {
-            mensajes.push(`<span>Categoría creada</span>`);
-            window.sessionStorage.removeItem("msg");
-            window.sessionStorage.setItem("msg", JSON.stringify(mensajes));
-          } else {
-            mensajes.push(`<span>Categoría creada</span>`);
-            window.sessionStorage.setItem("msg", JSON.stringify(mensajes));
-          }
+          let mensajeContent = document.querySelector("[data-mensaje-div]");
+          let mensajeBanner = document.querySelector("[data-mensaje-span]");
+          mensajeContent.style.display = "flex";
+          mensajeBanner.innerHTML += `<span>Categoría creada</span>`;
 
         },
         (error) => {
@@ -69,9 +91,8 @@ export const handleForm = () => {
 
     let objetoProducto = {};
 
-    console.log(formImageUpload.get("fileToUpload").size)
-
-    if (formImageUpload.get("fileToUpload").size > 0) {
+    console.log(formImageUpload !== undefined)
+    if (formImageUpload !== undefined) {
 
       convertToBase64(imageUpload.files[0]).then(
         (response) => {
@@ -85,8 +106,9 @@ export const handleForm = () => {
             "desc": descripcionProducto.value
           };
 
+          console.log(objetoProducto);
 
-          postData(categoryURL, {"name": inputCatProducto.value}).then(
+          postData(productosURL, objetoProducto).then(
           // postData('http://localhost:8000/productos', objetoProducto).then(
             (response) => {
 
@@ -99,19 +121,20 @@ export const handleForm = () => {
               urlImage.value = "";
               descripcionProducto.value = "";
               categoriaDeclarada = "";
-              select.value = 0;
+              select.setAttribute("value", 0);
 
 
-              if (msg !== null) {
-                mensajes.push(`<span>Producto creado</span>`);
-                window.sessionStorage.removeItem("msg");
-                window.sessionStorage.setItem("msg", JSON.stringify(mensajes));
+              let mensajeContent = document.querySelector("[data-mensaje-div]");
+              let mensajeBanner = document.querySelector("[data-mensaje-span]");
+              mensajeContent.style.display = "flex";
+              mensajeBanner.innerHTML += `<span>Producto creado</span>`;
 
-              } else {
-                mensajes.push(`<span>Producto creado</span>`);
-                window.sessionStorage.setItem("msg", JSON.stringify(mensajes));
 
-              }
+              let closeBanner = document.querySelector("#closeX");
+              closeBanner.addEventListener("click", () => {
+                mensajeBanner.innerHTML = "";
+                mensajeContent.style.display = "none";
+              });
 
             },
             (error) => {
@@ -125,8 +148,7 @@ export const handleForm = () => {
         }
       )
 
-    }
-     else {
+    } else {
 
       objetoProducto = {
         "id": uuid.v4(),
@@ -136,6 +158,8 @@ export const handleForm = () => {
         "img": urlImage.value,
         "desc": descripcionProducto.value
       };
+
+      // console.log(objetoProducto);
 
       postData(productosURL, objetoProducto).then(
       // postData('http://localhost:8000/productos', objetoProducto).then(
@@ -153,23 +177,26 @@ export const handleForm = () => {
           select.value = 0;
 
 
+          let mensajeContent = document.querySelector("[data-mensaje-div]");
+          let mensajeBanner = document.querySelector("[data-mensaje-span]");
+          mensajeContent.style.display = "flex";
+          mensajeBanner.innerHTML += `<span>Producto creado</span>`;
 
-          if (msg !== null) {
-            mensajes.push(`<span>Producto creado</span>`);
-            window.sessionStorage.removeItem("msg");
-            window.sessionStorage.setItem("msg", JSON.stringify(mensajes));
 
-          } else {
-            mensajes.push(`<span>Producto creado</span>`);
-            window.sessionStorage.setItem("msg", JSON.stringify(mensajes));
+          let closeBanner = document.querySelector("#closeX");
+          closeBanner.addEventListener("click", () => {
+            mensajeBanner.innerHTML = "";
+            mensajeContent.style.display = "none";
+          });
 
-          }
+
 
         },
         (error) => {
           console.log(error)
         }
       );
+
     }
   });
   mensajes = [];
@@ -201,6 +228,19 @@ export const selectHandler = () => {
 
         }
       })
+
+      catProducto.addEventListener('change', () => {
+        if (!select.disabled) {
+          select.disabled = true;
+          select.style.cssText = `cursor: not-allowed;`;
+
+        } else {
+          select.disabled = false;
+          select.style.cssText = `cursor: text;`;
+        }
+
+      })
+
     },
     (error) => {
     }

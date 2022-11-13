@@ -1,7 +1,7 @@
 import { barraSearch } from './componentes/searchComponent.js';
 import { showSearchItems } from './componentes/searchComponent.js';
 import { loginBoton } from './componentes/botonLogin.js';
-
+import { formContacto } from './componentes/contactoFormulario.js';
 
 
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   showSearchItems(consulta);
 
-
+  formContacto();
 
 
 });

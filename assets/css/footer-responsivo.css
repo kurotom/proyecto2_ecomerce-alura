@@ -1,0 +1,76 @@
+@import "./index.css";
+
+@media screen and (max-width: 500px) {
+
+  #footer {
+    /* flex-direction: column; */
+    height: auto;
+  }
+  #footer__datos {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    flex-direction: column;
+    width: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  #footer__datos-info {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  #footer__datos-info ul {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  #footer__datos-contacto {
+    width: auto;
+  }
+  #footer__datos-informacion {
+    height: 3rem;
+  }
+  #footer__datos-informacion span {
+    animation-name: none;
+    text-align: center;
+    width: 8rem;
+    font-size: 24px;
+  }
+
+
+  #footer__creditos {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+  #footer__datos {
+    padding: 2rem;
+  }
+
+  #footer__datos-info {
+    display: grid;
+    grid-template-areas:
+      "logo form"
+      "info vacio";
+  }
+
+  #footer__datos-info img {
+    grid-area: logo;
+  }
+  #footer__datos-info ul {
+    grid-area: logo;
+    margin-top: 4rem;
+  }
+  #footer__datos-contacto {
+    grid-area: form
+  }
+
+  #footer__creditos {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

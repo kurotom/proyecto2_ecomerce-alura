@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./assets/css/footer.css">
 
     <link rel="stylesheet" href="./assets/css/responsivo.css">
+        <link rel="stylesheet" href="./assets/css/footer-responsivo.css">
     <link rel="stylesheet" href="./assets/css/editproduct-responsivo.css">
 
 
@@ -90,7 +91,7 @@
               <div id="categoria__existente" class="">
                 <!-- <span>Existente</span> -->
                 <select class="" name="" data-form-category-select>
-                  <option value="0" selected>Seleccione</option>
+                  <option value="0" >Seleccione</option>
                 </select>
               </div>
 
@@ -152,14 +153,19 @@
           </ul>
 
           <div id="footer__datos-contacto" class="">
-            <span>Hable con nosotros</span>
+            <div id="footer__datos-informacion" class="">
+              <h1>Hable con nosotros</h1>
+              <span data-showalert-send></span>
+            </div>
             <form id="form_contacto" class="" data-form-contacto>
+              <span class="form_contacto-alert" data-warning-name></span>
               <fieldset id="form_contacto-fs1" class="campos">
-                <input type="text" name="" value="" >
+                <input type="text" name="" value="" minlength="1" maxlength="40" data-form-contacto-name>
                 <span>Nombre</span>
               </fieldset>
+              <span class="form_contacto-alert" data-warning-mensaje></span>
               <fieldset id="form_contacto-fs2" class="campos">
-                <input type="text" name="" value="" >
+                <input type="text" name="" value="" minlength="1" maxlength="120" data-form-contacto-mensaje>
                 <span>Escribe tu mensaje</span>
               </fieldset>
               <button type="submit" name="button">Enviar mensaje</button>

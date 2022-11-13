@@ -1,0 +1,22 @@
+@import "./index.css";
+
+@media screen and (max-width: 500px) {
+
+  #maincontent {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  .login__input {
+    width: 15rem;
+  }
+
+  .button__submit {
+    width: 10rem;
+  }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+}

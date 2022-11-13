@@ -22,6 +22,11 @@
     row-gap: 1rem;
     font-weight: bold;
   }
+  .producto:nth-child(+n) img {
+    width: 100% !important
+
+  }
+
 
   #maincontent {
     min-height: 50vh;

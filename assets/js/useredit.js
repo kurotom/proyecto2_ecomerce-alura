@@ -1,8 +1,10 @@
 import { categoryURL, productosURL, usersURL} from './urlsDB.js';
 import { patchData } from './handlers/fetch_patch.js';
-
+import { formContacto } from './componentes/contactoFormulario.js';
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  formContacto();
 
   let userData = JSON.parse(window.localStorage.getItem("user"));
 

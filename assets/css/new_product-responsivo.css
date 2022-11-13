@@ -5,15 +5,57 @@
   #newproduct {
     justify-content: normal;
     margin-bottom: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0;
   }
   #newproduct__title {
+    text-align: center;
     width: auto;
+    padding-left: 0;
   }
   #newproduct__form {
     width: auto;
-    margin-left: 1rem;
-    margin-right: 1rem;
   }
+
+  #fieldsetForm__uploadDiv {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .fieldsetForm span {
+    padding-left: 0;
+  }
+  .fieldsetForm input {
+    width: 100%;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  #categoria {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #categoria__nueva input {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-left: 0;
+  }
+
+  #priceField {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #priceField__price {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
 
 }
 

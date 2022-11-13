@@ -30,11 +30,35 @@ export const formContacto = () => {
     }
 
     if (nameInput.value !== "" && mensajeInput.value !== "") {
-      console.log(
-        nameInput.value,
-        mensajeInput.value
+      // console.log(
+      //   nameInput.value,
+      //   mensajeInput.value
+      // )
+
+      document.querySelector("[data-showalert-send]").innerText = "Mensaje enviado!";
+      document.querySelector("[data-showalert-send]").style.cssText = `animation-name: hidden;`;
+
+
+      const promesaHiddenAlerta = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(
+            document.querySelector("[data-showalert-send]").style.cssText = `animation-name: none;`
+          )
+        }, 3000);
+      })
+
+      promesaHiddenAlerta.then(
+        (resolve) => {
+          document.querySelector("[data-showalert-send]").innerText = "";
+        },
+        (reject) => {
+        }
       )
 
+
+
+      nameInput.value = "";
+      mensajeInput.value = "";
     }
 
   });

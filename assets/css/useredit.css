@@ -51,6 +51,7 @@
   padding-left: 1rem;
 }
 .input__edit {
+  font-family: var(--font-family);
   height: 2rem;
   font-size: 17px;
   border-radius: 1rem;

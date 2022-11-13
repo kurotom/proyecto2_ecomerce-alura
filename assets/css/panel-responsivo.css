@@ -1,17 +1,26 @@
 @import "./index.css";
 
 @media screen and (max-width: 500px) {
-  #panel {
+
+  #maincontent {
     margin-left: 2rem;
-    margin-right: 2rem
+    margin-right: 2rem;
   }
+
+
   .panel__datos-div {
     grid-template-columns: 5rem auto 2rem;
   }
 
+  #change {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  #change__form {
+    width: 100%;
+  }
+
   #deleteAccount {
-    margin-left: 2rem;
-    margin-right: 2rem;
     text-align: center;
   }
 
@@ -22,5 +31,10 @@
 }
 
 @media screen and (min-width: 500px) and (max-width: 1000px) {
+
+  #change {
+    justify-content: flex-start !important;
+    padding-top: 10rem;
+  }
 
 }

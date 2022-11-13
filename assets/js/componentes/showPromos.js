@@ -92,7 +92,7 @@ export const itemsPromos = (url, contenedor) => {
         borrarBtn.forEach(item => {
           item.addEventListener("click", () => {
             const itemID = item.parentNode.getAttribute("value");
-            deleteData(productosURL + `${itemID}`, {"id": itemID}).then(
+            deleteData(productosURL + `/${itemID}`, {"id": itemID}).then(
               (response) => {
 
                 let content = document.querySelector("[data-msg-span]");

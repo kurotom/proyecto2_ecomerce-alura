@@ -2,8 +2,9 @@
 
 
 #maincontent {
-  background-color: var(--color-fondo);
   font-family: 'Raleway', sans-serif;
+  margin-right: 7rem;
+  margin-left: 7rem;
 }
 
 #navbar ul {
@@ -65,12 +66,15 @@
 .formulario {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
 .login__input {
+  font-family: var(--font-family);
   height: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -78,9 +82,11 @@
   font-size: 17px;
   border-radius: 1rem;
   border: 1px solid gray;
+  width: 20rem;
 }
 
 .button__submit {
+  font-size: 20px;
   color: white;
   text-decoration: none;
   background-color: var(--color-boton);
@@ -93,11 +99,11 @@
   font-weight: bold;
   border-radius: 4px;
   border: none;
-  width: 100%;
+  width: 20rem;
 }
-.button__submit:hover {
+.button__submit:hover, .button__submit:active {
   cursor: pointer;
-  font-size: 17px;
+  font-size: 22px;
 }
 
 .div-span-form {
@@ -115,7 +121,7 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 1rem;
 }
-.div-span-form span:hover {
+.div-span-form span:hover, .div-span-form span:active {
   cursor: pointer;
   font-size: 18px;
   box-shadow: 0px 1px 5px gray;

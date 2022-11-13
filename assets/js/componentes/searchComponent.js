@@ -26,6 +26,8 @@ export const barraSearch = () => {
 
 export const showSearchItems = (query) => {
 
+  const consultaQuery = query;
+
   fetchData(productosURL).then(
     (response) => {
 
@@ -105,9 +107,18 @@ export const showSearchItems = (query) => {
             deleteData(productosURL + `/${itemID}`, {"id": itemID}).then(
               (response) => {
 
-                let content = document.querySelector("[data-msg-span]");
-                content.innerHTML += `<span>Elemento borrado</span>`;
-                document.querySelector("[data-msg]").style.display = "flex";
+                // let content = document.querySelector("[data-msg-span]");
+                // content.innerHTML = `<span>Elemento borrado</span>`;
+                // document.querySelector("[data-msg]").style.display = "flex";
+                //
+                // setTimeout(() => {
+                //   content.innerHTML = "";
+                //   document.querySelector("[data-msg]").style.display = "none";
+                // }, 2500);
+
+
+                document.querySelector("[data-main-search]").innerHTML = "";
+                showSearchItems(consultaQuery);
 
 
               },

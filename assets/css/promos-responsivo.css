@@ -14,6 +14,9 @@
     display: flex;
     width: 47%;
   }
+  .producto:nth-child(+n) img {
+    width: 100% !important;
+  }
 
 }
 
@@ -29,9 +32,12 @@
   #promos__body {
     margin-right: 2rem;
     margin-left: 2rem;
+    justify-content: flex-start;
   }
   .producto:nth-child(+n) {
     display: flex;
-    width: auto;
+    /* width: auto; */
+    width: 172px !important;
   }
+
 }

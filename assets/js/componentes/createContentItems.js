@@ -5,6 +5,8 @@ import { deleteData } from '../handlers/fetch_delete.js';
 
 export const handleProductos = (parentDiv, productosIterable=[]) => {
 
+  let contenedorProductos = parentDiv;
+
   // BOTON CERRAR ALERTAS
   let closeBanner = document.querySelector("[data-msg-close]");
   closeBanner.addEventListener("click", () => {
@@ -14,9 +16,6 @@ export const handleProductos = (parentDiv, productosIterable=[]) => {
   //
   //
 
-
-
-  let contenedorProductos = parentDiv;
 
   if (productosIterable.length === 0) {
     fetchData(productosURL).then(
@@ -77,13 +76,21 @@ export const handleProductos = (parentDiv, productosIterable=[]) => {
         borrarBtn.forEach(item => {
           item.addEventListener("click", () => {
             const itemID = item.parentNode.getAttribute("value");
-            deleteData(productosURL + `${itemID}`, {"id": itemID}).then(
+            deleteData(productosURL + `/${itemID}`, {"id": itemID}).then(
               (response) => {
 
                 let content = document.querySelector("[data-msg-span]");
-                content.innerHTML += `<span>Elemento borrado</span>`;
+                content.innerHTML = `<span>Elemento borrado</span>`;
                 document.querySelector("[data-msg]").style.display = "flex";
 
+                setTimeout(() => {
+                  content.innerHTML = "";
+                  document.querySelector("[data-msg]").style.display = "none";
+                }, 2500);
+
+
+                contenedorProductos.innerHTML = "";
+                handleProductos(contenedorProductos);
 
               },
               (error) => {

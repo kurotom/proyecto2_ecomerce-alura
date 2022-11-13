@@ -1,0 +1,16 @@
+@import "./index.css";
+
+@media screen and (max-width: 500px) {
+  #data {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  #form__change {
+    width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+}

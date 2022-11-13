@@ -5,6 +5,9 @@ import { postData } from './handlers/fetch_post.js';
 
 import { barraSearch } from './componentes/searchComponent.js';
 
+import { formContacto } from './componentes/contactoFormulario.js';
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -39,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //
   barraSearch();
+  //
+  formContacto();
   //
 
 
@@ -144,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
               window.localStorage.setItem("user", JSON.stringify(dataUser));
 
-              window.location.href = "index.html";
+              window.location.href = "panel.html";
 
 
             } else {
