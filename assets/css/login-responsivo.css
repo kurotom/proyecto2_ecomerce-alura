@@ -7,6 +7,10 @@
     margin-left: 2rem;
   }
 
+  #message__contenido {
+    width: 100%;
+  }
+
   .login__input {
     width: 15rem;
   }

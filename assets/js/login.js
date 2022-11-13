@@ -52,12 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
   btnCreateAccount.addEventListener("click", (evento) => {
     conenedorCreate.style.display = "flex";
     loginDiv.style.display = "none";
-    panelUser.style.display = "none";
   })
   cancelCreateUser.addEventListener("click", () => {
     conenedorCreate.style.display = "none";
     loginDiv.style.display = "flex";
-    panelUser.style.display = "none";
+
+    contenedorMSG.style.display = 'none';
+    spanMSG.innerText = "";
   })
 //
 //
@@ -81,20 +82,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       postData(usersURL, objeto).then(
         (response) => {
-          console.log(response)
+          // console.log(response)
+
+          const dataUser = {
+            "id": objeto.id,
+            "name": objeto.name,
+            "email": objeto.email,
+            "isadmin": objeto.isadmin
+          }
+          window.localStorage.setItem("user", JSON.stringify(dataUser));
+
+          nameNewUser.value = "";
+          emailNewUser.value = "";
+          pass1NewUser.value = "";
+          pass2NewUser.value = "";
+
+          window.location.href = "index.html";
         },
         (error) => {
         }
       )
 
-      nameNewUser.value = "";
-      emailNewUser.value = "";
-      pass1NewUser.value = "";
-      pass2NewUser.value = "";
-
-      window.location.href = "index.html";
     } else {
-      divMensajes.innerHTML += `<span>Las contraseñas deben coincidir</span>`
+      divMensajes.innerHTML = "";
+      divMensajes.innerHTML = `<span>Las contraseñas deben coincidir</span>`;
+      contenedorMSG.style.display = "flex";
+
 
       pass1NewUser.value = "";
       pass2NewUser.value = "";
