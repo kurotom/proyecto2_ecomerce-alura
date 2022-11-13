@@ -65,8 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
   cancelEdit.addEventListener("click",() => {
     window.location.href = "panel.html";
   });
-  deleteAccount.addEventListener("click", () => {
 
-  });
 
 });
