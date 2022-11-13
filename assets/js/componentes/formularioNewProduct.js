@@ -91,7 +91,7 @@ export const handleForm = () => {
 
     let objetoProducto = {};
 
-    console.log(formImageUpload !== undefined)
+    // console.log(formImageUpload !== undefined)
     if (formImageUpload !== undefined) {
 
       convertToBase64(imageUpload.files[0]).then(
@@ -106,7 +106,7 @@ export const handleForm = () => {
             "desc": descripcionProducto.value
           };
 
-          console.log(objetoProducto);
+          // console.log(objetoProducto);
 
           postData(productosURL, objetoProducto).then(
           // postData('http://localhost:8000/productos', objetoProducto).then(
