@@ -11,12 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnAgregarProducto = document.getElementById("addBtn");
 
   let userData = JSON.parse(window.localStorage.getItem('user'));
-  if (userData.isadmin === false || userData === null) {
-    btnAgregarProducto.style.cssText = "display: none";
+  if (userData !== null) {
+    if (userData.isadmin === false || userData === null) {
+      btnAgregarProducto.style.cssText = "display: none";
 
-
-  } else {
-    btnAgregarProducto.style.cssText = "display: flex";
+    } else {
+      btnAgregarProducto.style.cssText = "display: flex";
+    }
   }
 
 

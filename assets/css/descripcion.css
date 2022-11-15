@@ -52,11 +52,12 @@
   color: var(--color-precio);
   font-weight: bold;
 }
-#description__datos span {
+#description__datos span:nth-child(1n+2) {
   color: var(--color-precio);
   font-weight: 600;
   font-size: 20px;
 }
+
 #description__datos p {
   color: var(--color-precio);
   font-size: 18px;
@@ -96,24 +97,45 @@
   justify-content: flex-start;
   row-gap: 1rem;
   width: 10.31rem;
-  height: 15rem;
+  height: auto;
   border: 1px solid var(--color-fondo);
   border-radius: 1rem;
   padding: 10px 5px 10px 5px
 }
 .similares__productos img {
   width: 100%;
-  height: 80%;
+  height: 10rem;
 }
 .producto__info {
-  row-gap: 0.5rem;
-  font-size: 14px;
+  /* row-gap: 0.5rem; */
+  /* font-size: 14px; */
 }
 
 
-.similares__productos .producto__info span:nth-child(2) {
-  font-weight: bold !important;
+.producto a {
+  text-decoration: none;
+  color: var(--color-verproducto);
+  font-size: 18px;
+  font-weight: bold;
 }
-.similares__productos .producto__info a {
-  font-weight: bold !important;
+
+
+.producto__info-name {
+  color: var(--color-precio);
+  font-weight: normal;
+}
+.producto__info-precio {
+  color: var(--color-precio);
+  font-size: 18px;
+  font-weight: bold;
+}
+.producto__info-precio-original {
+  font-weight: normal;
+  font-size: 15px;
+  text-decoration: line-through;
+}
+.producto__info-precio-descuento {
+  color: var(--color-precio);
+  font-size: 18px;
+  font-weight: bold;
 }

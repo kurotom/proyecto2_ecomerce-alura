@@ -1,4 +1,4 @@
-import { categoryURL, productosURL, usersURL} from '../urlsDB.js';
+import { categoryURL, productosURL, usersURL, descuentoURL} from '../urlsDB.js';
 
 import { fetchData } from '../handlers/fetch_get.js';
 
@@ -40,25 +40,62 @@ export const showIndex = () => {
       // fetchData('http://localhost:8000/productos').then(
         (response) => {
           // console.log(response)
-          let productContent = contenedor.querySelectorAll(".fila__productos")
+          let productosItems = response;
+          let productContenedor = contenedor.querySelectorAll(".fila__productos")
 
-          productContent.forEach(itemParent => {
-            response.map(item => {
-              if (item.cat === parseInt(itemParent.getAttribute('value'))) {
-                let productoHTML = `<div class="producto">
-                  <img src="${item.img}" alt="productos">
-                  <div class="producto__info">
-                    <span>${item.name}</span>
-                    <span>$ ${item.price}</span>
-                    <a href="descripcion.html?item=${item.id}" title="Ir al producto">Ver producto</a>
-                  </div>
-                </div>`;
+          fetchData(descuentoURL).then(
+            (response) => {
 
-                itemParent.innerHTML += productoHTML;
-              }
-            });
+              productContenedor.forEach(itemParent => {
+                productosItems.map(item => {
+                  if (item.cat === parseInt(itemParent.getAttribute('value'))) {
+                    let productoHTML = `<div class="producto">
+                      <img src="${item.img}" alt="productos">
+                      <div class="producto__info">
+                        <span class="producto__info-name">${item.name}</span>
+                        ${
+                          parseInt(response[0].catid) === parseInt(item.cat)
+                          ? `<div>
+                            <span class="producto__info-precio-original">$ ${item.price}</span>
+                            <span class="producto__info-precio-descuento">$ ${ (item.price - ((response[0].desc * item.price) / 100)).toFixed(1) }</span>
+                          </div>
+                          `
+                          : `<span class="producto__info-precio">$ ${item.price}</span>`
+                        }
 
-          });
+                        <a href="descripcion.html?item=${item.id}" title="Ir al producto">Ver producto</a>
+                      </div>
+                    </div>`;
+
+                    itemParent.innerHTML += productoHTML;
+                  }
+                });
+              });
+
+
+            },
+            (error) => {
+            }
+          )
+
+          // productContent.forEach(itemParent => {
+          //   response.map(item => {
+          //     if (item.cat === parseInt(itemParent.getAttribute('value'))) {
+          //       let productoHTML = `<div class="producto">
+          //         <img src="${item.img}" alt="productos">
+          //         <div class="producto__info">
+          //           <span>${item.name}</span>
+          //           <span>$ ${item.price}</span>
+          //           <a href="descripcion.html?item=${item.id}" title="Ir al producto">Ver producto</a>
+          //         </div>
+          //       </div>`;
+          //
+          //       itemParent.innerHTML += productoHTML;
+          //     }
+          //   });
+          // });
+
+
 
         },
         (error) => {

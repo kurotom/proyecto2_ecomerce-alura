@@ -30,6 +30,18 @@
   margin-right: 7rem;
 }
 
+/* .producto:nth-child(n) {
+  display: flex !important;
+  width: 161px !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: bold;
+  background-color: white;
+  row-gap: 1rem;
+  box-shadow: 0px 1px 5px lightgray;
+} */
+
 
 #nomatches {
   width: 100%;

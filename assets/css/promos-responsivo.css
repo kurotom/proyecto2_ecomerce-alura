@@ -9,6 +9,7 @@
   #promos__body {
     margin-right: 2rem;
     margin-left: 2rem;
+    padding-top: 2rem;
   }
   .producto:nth-child(+n) {
     display: flex;

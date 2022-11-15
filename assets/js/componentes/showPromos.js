@@ -1,4 +1,4 @@
-import { categoryURL, productosURL, usersURL} from '../urlsDB.js';
+import { categoryURL, productosURL, usersURL, descuentoURL} from '../urlsDB.js';
 import { fetchData } from '../handlers/fetch_get.js';
 import { deleteData } from '../handlers/fetch_delete.js';
 import { handleProductos } from './createContentItems.js';
@@ -44,68 +44,91 @@ export const itemsPromos = (url, contenedor) => {
           mostrarOpciones = userData.isadmin;
         }
 
-        productos.forEach(item => {
-          let template;
-          if (mostrarOpciones) {
-            template =  `
-              <div class="producto">
-                <div class="producto__options" value="${item.id}">
-                  <i id="edit" class="fa-solid fa-pen-to-square icons" title="Editar" ></i>
-                  <i id="delete" class="fa-regular fa-trash-can icons" title="Borrar" ></i>
-                </div>
-                <div class="producto__informacion">
-                  <img src="${item.img}" alt="productos">
-                  <span>${item.name}</span>
-                  <span>$ ${item.price}</span>
-                  <a href="descripcion.html?item=${item.id}" title="Ir al producto">Ver producto</a>
-                </div>
-              </div>`;
+        fetchData(descuentoURL).then(
+          (response) => {
+            let categoriaDescuento = response;
 
-          } else {
-            template =  `
-              <div class="producto">
-                <div class="producto__options" value="${item.id}">
-                </div>
-                <div class="producto__informacion">
-                  <img src="${item.img}" alt="productos">
-                  <span>${item.name}</span>
-                  <span>$ ${item.price}</span>
-                  <a href="descripcion.html?item=${item.id}" title="Ir al producto">Ver producto</a>
-                </div>
-              </div>`;
-          }
+            productos.forEach(item => {
+              let template;
+              if (mostrarOpciones) {
+                template =  `
+                  <div class="producto">
+                    <div class="producto__options" value="${item.id}">
+                      <i id="edit" class="fa-solid fa-pen-to-square icons" title="Editar" ></i>
+                      <i id="delete" class="fa-regular fa-trash-can icons" title="Borrar" ></i>
+                    </div>
+                    <div class="producto__informacion">
+                      <img src="${item.img}" alt="productos">
+                      <span class="producto__info-name">${item.name}</span>
+                      ${
+                        parseInt(categoriaDescuento.catid) === parseInt(item.cat)
+                        ? `<div>
+                            <span class="producto__info-precio-original">$ ${item.price}</span>
+                            <span class="producto__info-precio-descuento">$ ${ (item.price - ((response[0].desc * item.price) / 100)).toFixed(1) }</span>
+                            </div>`
+                        : `<span class="producto__info-precio">$ ${item.price}</span>`
+                      }
+                      <a href="descripcion.html?item=${item.id}" title="Ir al producto">Ver producto</a>
+                    </div>
+                  </div>`;
 
-          contenedor.innerHTML += template;
-        })
-
-        let editarBtn = document.querySelectorAll("#edit");
-        let borrarBtn = document.querySelectorAll("#delete");
-
-
-        editarBtn.forEach(item => {
-          item.addEventListener('click', () => {
-            const itemID = item.parentNode.getAttribute("value");
-            window.location.href = `editproduct.html?id=${itemID}`;
-
-          })
-        });
-        borrarBtn.forEach(item => {
-          item.addEventListener("click", () => {
-            const itemID = item.parentNode.getAttribute("value");
-            deleteData(productosURL + `/${itemID}`, {"id": itemID}).then(
-              (response) => {
-
-                let content = document.querySelector("[data-msg-span]");
-                content.innerHTML += `<span>Elemento borrado</span>`;
-                document.querySelector("[data-msg]").style.display = "flex";
-
-
-              },
-              (error) => {
+              } else {
+                template =  `
+                  <div class="producto">
+                    <div class="producto__options" value="${item.id}">
+                    </div>
+                    <div class="producto__informacion">
+                      <img src="${item.img}" alt="productos">
+                      <span class="producto__info-name">${item.name}</span>
+                      ${
+                        parseInt(categoriaDescuento.catid) === parseInt(item.cat)
+                        ? `<div>
+                            <span class="producto__info-precio-original">$ ${item.price}</span>
+                            <span class="producto__info-precio-descuento">$ ${ (item.price - ((response[0].desc * item.price) / 100)).toFixed(1) }</span>
+                            </div>`
+                        : `<span class="producto__info-precio">$ ${item.price}</span>`
+                      }
+                      <a href="descripcion.html?item=${item.id}" title="Ir al producto">Ver producto</a>
+                    </div>
+                  </div>`;
               }
-            )
-          })
-        });
+
+              contenedor.innerHTML += template;
+            })
+
+            let editarBtn = document.querySelectorAll("#edit");
+            let borrarBtn = document.querySelectorAll("#delete");
+
+
+            editarBtn.forEach(item => {
+              item.addEventListener('click', () => {
+                const itemID = item.parentNode.getAttribute("value");
+                window.location.href = `editproduct.html?id=${itemID}`;
+
+              })
+            });
+            borrarBtn.forEach(item => {
+              item.addEventListener("click", () => {
+                const itemID = item.parentNode.getAttribute("value");
+                deleteData(productosURL + `/${itemID}`, {"id": itemID}).then(
+                  (response) => {
+
+                    let content = document.querySelector("[data-msg-span]");
+                    content.innerHTML += `<span>Elemento borrado</span>`;
+                    document.querySelector("[data-msg]").style.display = "flex";
+
+
+                  },
+                  (error) => {
+                  }
+                )
+              })
+            });
+          },
+          (error) => {
+          }
+        );
+
 
 
       } else {

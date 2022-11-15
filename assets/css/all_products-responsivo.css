@@ -7,6 +7,7 @@
     row-gap: 0;
     display: flex !important;
     width: 47% !important;
+    max-width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -15,6 +16,12 @@
   }
   .producto:nth-child(+n) img {
     width: 100% !important
+  }
+
+  .producto__options {
+    top: 0.7rem;
+    bottom: 0rem;
+    width: 80%;
   }
 
 }

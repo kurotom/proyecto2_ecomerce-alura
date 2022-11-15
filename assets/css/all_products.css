@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1rem 7rem 1rem 7rem;
+  padding: 0rem 7rem 1rem 7rem;
   height: 3rem;
   font-size: 20px;
   font-weight: bold;
@@ -43,7 +43,7 @@
 #all {
   background-color: var(--color-fondo);
 
-  padding: 1rem 7rem 7rem 7rem;
+  padding: 0rem 7rem 7rem 7rem;
 
   display: flex;
   flex-direction: column;
@@ -90,14 +90,22 @@
 }
 
 .producto:nth-child(+n) {
-  row-gap: 0;
   display: flex !important;
-  /* width: 47% !important; */
+  width: auto;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  row-gap: 1rem;
+  row-gap: 0;
   font-weight: bold;
+  box-shadow: none;
+  max-width: 176px;
+  padding: 0rem 0rem 0.5rem 0rem;
+  border-radius: 1rem;
+}
+
+.producto:nth-child(+n):hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 .producto__options {
@@ -106,12 +114,13 @@
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  top: 2.7rem;
+  bottom: 0.3rem;
   margin: 0 auto;
   align-items: center;
   height: 1.5rem;
 }
 .icons {
+  z-index: 10;
   font-size: 1.5em;
   color: white !important;
   font-weight: bold !important;
@@ -125,15 +134,47 @@
 .producto__informacion {
   display: flex;
   flex-direction: column;
+  padding-bottom: 0.5rem;
   row-gap: 0.7rem;
-  width: 100%;
+  /* width: 100%; */
+  width: auto;
+  bottom: 2.5rem;
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 1px 5px lightgray;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 1rem;
 }
 
 .producto img {
-  width: 100%;
+  max-width: 11rem;
+  /* width: 100%; */
 }
 
 .producto a {
   text-decoration: none;
   color: var(--color-verproducto);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.producto__info-name {
+  color: var(--color-precio);
+  font-weight: normal;
+}
+.producto__info-precio {
+  color: var(--color-precio);
+  font-size: 18px;
+  font-weight: bold;
+}
+.producto__info-precio-original {
+  font-weight: normal;
+  font-size: 15px;
+  text-decoration: line-through;
+}
+.producto__info-precio-descuento {
+  color: var(--color-precio);
+  font-size: 18px;
 }

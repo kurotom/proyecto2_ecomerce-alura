@@ -6,7 +6,7 @@
       "cat": 1,
       "price": 56,
       "img": "assets/img/unsplash_4OHkK555s1A.png",
-      "desc": "Stormtrooper con puntería reducida."
+      "descripcion": "Stormtrooper con puntería reducida."
     },
     {
       "name": "product1",
@@ -14,7 +14,7 @@
       "cat": 1,
       "price": 48,
       "img": "assets/img/unsplash_1VV1MRafd7A.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product2",
@@ -22,7 +22,7 @@
       "cat": 1,
       "price": 62,
       "img": "assets/img/unsplash_6FDXGY9J6y4.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product3",
@@ -30,7 +30,7 @@
       "cat": 1,
       "price": 28,
       "img": "assets/img/unsplash_epRFE_hBNjo.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product4",
@@ -38,7 +38,7 @@
       "cat": 1,
       "price": 44,
       "img": "assets/img/unsplash_KeGToDVN0l4.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product5",
@@ -46,7 +46,7 @@
       "cat": 1,
       "price": 38,
       "img": "assets/img/unsplash_R8L1l9RN198.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product6",
@@ -54,7 +54,7 @@
       "cat": 2,
       "price": 69,
       "img": "assets/img/unsplash_0POwK6iAiRQ.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product7",
@@ -62,7 +62,7 @@
       "cat": 2,
       "price": 34,
       "img": "assets/img/unsplash_bUgaIaZysH0.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product8",
@@ -70,7 +70,7 @@
       "cat": 2,
       "price": 67,
       "img": "assets/img/unsplash_caNzzoxls8Q.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product9",
@@ -78,7 +78,7 @@
       "cat": 2,
       "price": 30,
       "img": "assets/img/unsplash_k-xYhI3-gJM.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product10",
@@ -86,7 +86,7 @@
       "cat": 2,
       "price": 58,
       "img": "assets/img/unsplash_ZV7lnfyQLmA.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product11",
@@ -94,7 +94,7 @@
       "cat": 2,
       "price": 59,
       "img": "assets/img/unsplash_Zjn4dT993-g.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product12",
@@ -102,7 +102,7 @@
       "cat": 3,
       "price": 43,
       "img": "assets/img/unsplash_sYVY_ZKwaxU.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product13",
@@ -110,7 +110,7 @@
       "cat": 3,
       "price": 43,
       "img": "assets/img/unsplash_R8L1l9RN198.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product14",
@@ -118,7 +118,7 @@
       "cat": 3,
       "price": 49,
       "img": "assets/img/unsplash_r27umXAelDc.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product15",
@@ -126,7 +126,7 @@
       "cat": 3,
       "price": 57,
       "img": "assets/img/unsplash_MxVkWPiJALs.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product16",
@@ -134,7 +134,7 @@
       "cat": 3,
       "price": 38,
       "img": "assets/img/unsplash_jMT6BrgBuXU.png",
-      "desc": ""
+      "descripcion": ""
     },
     {
       "name": "product17",
@@ -142,7 +142,7 @@
       "cat": 3,
       "price": 30,
       "img": "assets/img/unsplash_fMP-oCze3AY.png",
-      "desc": ""
+      "descripcion": ""
     }
   ],
   "category": [
@@ -157,6 +157,13 @@
     {
       "id": 3,
       "name": "Diversos"
+    }
+  ],
+  "descuento": [
+    {
+      "id": 1,
+      "catid": 2,
+      "desc": 33
     }
   ],
   "users": [

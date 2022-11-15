@@ -69,7 +69,8 @@
 
   .producto:nth-child(-n + 4) {
     display: flex !important;;
-    width: 47%;
+    max-width: 42%;
+    /* width: 47%; */
   }
 
   .producto:nth-child(-n + 4) img {

@@ -103,7 +103,7 @@ export const handleForm = () => {
             "cat": categoriaDeclarada,
             "price": precioProducto.value,
             "img": response,
-            "desc": descripcionProducto.value
+            "descripcion": descripcionProducto.value
           };
 
           // console.log(objetoProducto);
@@ -156,7 +156,7 @@ export const handleForm = () => {
         "cat": categoriaDeclarada,
         "price": precioProducto.value,
         "img": urlImage.value,
-        "desc": descripcionProducto.value
+        "descripcion": descripcionProducto.value
       };
 
       // console.log(objetoProducto);
